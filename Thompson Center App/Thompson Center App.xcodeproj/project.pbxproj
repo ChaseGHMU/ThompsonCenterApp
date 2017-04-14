@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940269F61EA04B70004A0E23 /* ChildTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940269F51EA04B70004A0E23 /* ChildTableViewController.swift */; };
+		940269F81EA04BBC004A0E23 /* OutbreaksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940269F71EA04BBC004A0E23 /* OutbreaksTableViewController.swift */; };
+		940269FE1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */; };
+		94026A001EA04C95004A0E23 /* OutbreakInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940269FF1EA04C95004A0E23 /* OutbreakInfoViewController.swift */; };
+		94026A021EA04CAF004A0E23 /* FormsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94026A011EA04CAF004A0E23 /* FormsViewController.swift */; };
+		94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94026A031EA04CC0004A0E23 /* SleepViewController.swift */; };
+		94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94026A051EA04CCF004A0E23 /* ToiletTrainingViewController.swift */; };
+		94026A081EA04CF1004A0E23 /* BehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94026A071EA04CF1004A0E23 /* BehaviorViewController.swift */; };
 		949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F8C1E89C43600BC8746 /* AppDelegate.swift */; };
 		949B5F8F1E89C43600BC8746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F8E1E89C43600BC8746 /* ViewController.swift */; };
 		949B5F921E89C43600BC8746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F901E89C43600BC8746 /* Main.storyboard */; };
@@ -16,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		940269F51EA04B70004A0E23 /* ChildTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewController.swift; sourceTree = "<group>"; };
+		940269F71EA04BBC004A0E23 /* OutbreaksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutbreaksTableViewController.swift; sourceTree = "<group>"; };
+		940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewChildControllerViewController.swift; sourceTree = "<group>"; };
+		940269FF1EA04C95004A0E23 /* OutbreakInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutbreakInfoViewController.swift; sourceTree = "<group>"; };
+		94026A011EA04CAF004A0E23 /* FormsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormsViewController.swift; sourceTree = "<group>"; };
+		94026A031EA04CC0004A0E23 /* SleepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
+		94026A051EA04CCF004A0E23 /* ToiletTrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToiletTrainingViewController.swift; sourceTree = "<group>"; };
+		94026A071EA04CF1004A0E23 /* BehaviorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorViewController.swift; sourceTree = "<group>"; };
 		949B5F891E89C43600BC8746 /* Thompson Center App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thompson Center App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		949B5F8C1E89C43600BC8746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		949B5F8E1E89C43600BC8746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +72,17 @@
 		949B5F8B1E89C43600BC8746 /* Thompson Center App */ = {
 			isa = PBXGroup;
 			children = (
+				940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */,
 				949B5F8C1E89C43600BC8746 /* AppDelegate.swift */,
 				949B5F8E1E89C43600BC8746 /* ViewController.swift */,
 				949B5F901E89C43600BC8746 /* Main.storyboard */,
+				94026A071EA04CF1004A0E23 /* BehaviorViewController.swift */,
+				94026A051EA04CCF004A0E23 /* ToiletTrainingViewController.swift */,
+				94026A031EA04CC0004A0E23 /* SleepViewController.swift */,
+				94026A011EA04CAF004A0E23 /* FormsViewController.swift */,
+				940269FF1EA04C95004A0E23 /* OutbreakInfoViewController.swift */,
+				940269F71EA04BBC004A0E23 /* OutbreaksTableViewController.swift */,
+				940269F51EA04B70004A0E23 /* ChildTableViewController.swift */,
 				949B5F961E89C43600BC8746 /* Assets.xcassets */,
 				949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */,
 				949B5F9B1E89C43600BC8746 /* Info.plist */,
@@ -139,8 +163,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94026A001EA04C95004A0E23 /* OutbreakInfoViewController.swift in Sources */,
+				940269F81EA04BBC004A0E23 /* OutbreaksTableViewController.swift in Sources */,
+				94026A021EA04CAF004A0E23 /* FormsViewController.swift in Sources */,
+				940269F61EA04B70004A0E23 /* ChildTableViewController.swift in Sources */,
 				949B5F8F1E89C43600BC8746 /* ViewController.swift in Sources */,
 				949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */,
+				94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */,
+				94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */,
+				940269FE1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift in Sources */,
+				94026A081EA04CF1004A0E23 /* BehaviorViewController.swift in Sources */,
 				949B5F951E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +335,7 @@
 				949B5FA01E89C43600BC8746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
