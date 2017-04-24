@@ -10,26 +10,32 @@ import UIKit
 
 class CreateNewChildControllerViewController: UIViewController {
 
+    @IBOutlet weak var childNameInput: UITextField!
+    @IBOutlet weak var childBirthdayInput: UIDatePicker!
+    @IBOutlet weak var physicianNameInput: UITextField!
+    @IBOutlet weak var medicationInput: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func createButton(_ sender: UIButton) {
+        
+        if let childName = childNameInput.text,
+            let doctorName = physicianNameInput.text,
+            let meds = medicationInput.text {
+            let child = ChildStruct(childName: childName, birthDate: childBirthdayInput.date, doctorName: doctorName, medication: meds)
+            Data.sharedInstance.children.append(child)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
-    */
 
 }

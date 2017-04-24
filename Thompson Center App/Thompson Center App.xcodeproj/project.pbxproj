@@ -21,6 +21,7 @@
 		949B5F951E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */; };
 		949B5F971E89C43600BC8746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F961E89C43600BC8746 /* Assets.xcassets */; };
 		949B5F9A1E89C43600BC8746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */; };
+		94C9B2F31EAE6B6300526FEB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C9B2F21EAE6B6300526FEB /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		949B5F961E89C43600BC8746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		949B5F991E89C43600BC8746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		949B5F9B1E89C43600BC8746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C9B2F21EAE6B6300526FEB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */,
 				949B5F9B1E89C43600BC8746 /* Info.plist */,
 				949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */,
+				94C9B2F21EAE6B6300526FEB /* Data.swift */,
 			);
 			path = "Thompson Center App";
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				949B5F8F1E89C43600BC8746 /* ViewController.swift in Sources */,
 				949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */,
 				94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */,
+				94C9B2F31EAE6B6300526FEB /* Data.swift in Sources */,
 				94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */,
 				940269FE1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift in Sources */,
 				94026A081EA04CF1004A0E23 /* BehaviorViewController.swift in Sources */,
