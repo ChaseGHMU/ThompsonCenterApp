@@ -34,5 +34,6 @@ class BehaviorViewController: UIViewController {
 //        behavior.end_time = endDatePicker.date as NSDate
 //        
 //        context.insert(behavior)
+        navigationController!.popViewController(animated: true) // goes back
     }
 }
