@@ -90,3 +90,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension NSManagedObjectContext {
+    static var shared: NSManagedObjectContext {
+        return (UIApplication.shared.delegate as! AppDelegate)
+            .persistentContainer.viewContext
+    }
+}
+
