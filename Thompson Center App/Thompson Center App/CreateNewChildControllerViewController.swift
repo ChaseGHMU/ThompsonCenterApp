@@ -15,6 +15,7 @@ class CreateNewChildControllerViewController: UIViewController {
     @IBOutlet weak var physicianNameInput: UITextField!
     @IBOutlet weak var medicationInput: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,12 +29,12 @@ class CreateNewChildControllerViewController: UIViewController {
     
     
     @IBAction func createButton(_ sender: UIButton) {
-        
+        print(childBirthdayInput.date)
         if let childName = childNameInput.text,
             let doctorName = physicianNameInput.text,
             let meds = medicationInput.text {
-            let child = ChildStruct(childName: childName, birthDate: childBirthdayInput.date, doctorName: doctorName, medication: meds)
-            Data.sharedInstance.children.append(child)
+            Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds)
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             self.navigationController?.popViewController(animated: true)
         }
     }

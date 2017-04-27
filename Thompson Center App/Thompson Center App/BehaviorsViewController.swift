@@ -9,6 +9,7 @@
 import UIKit
 
 class BehaviorsViewController: UIViewController {
+    
     var passedName:String = ""
     
     @IBOutlet weak var name: UILabel!

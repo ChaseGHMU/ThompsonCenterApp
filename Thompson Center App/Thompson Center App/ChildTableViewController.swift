@@ -7,54 +7,55 @@
 //
 
 import UIKit
-
 class ChildTableViewController: UITableViewController {
     
-    var childrenArray = [ChildStruct]()
+    var child: [Child] = []
     
     @IBOutlet var ChildTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Children"
-        ChildTableView.dataSource = self;
-        ChildTableView.delegate = self;
+        
+        ChildTableView.dataSource = self
+        ChildTableView.delegate = self
         
         let backgroundImage = UIImageView(image: UIImage(named: "newThompsonImage.png"))
         backgroundImage.contentMode = .scaleAspectFit
         self.tableView.backgroundView = backgroundImage
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+            child = (try? context.fetch(Child.fetchRequest())) ?? []
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //Refresh the table with all the data from sharedInstance
-        
-        childrenArray = Data.sharedInstance.children
-        self.tableView.reloadData()
+        child = Model.sharedInstance.fetchChildren()
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return childrenArray.count
+        return child.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(child[indexPath.row].child_name)
+        //performSegue(withIdentifier: "showChildSegue", sender: self)
+
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        dateFormatter.dateStyle = .medium
         
-        cell.textLabel?.text = childrenArray[indexPath.row].childName
+        cell.textLabel?.text = child[indexPath.row].child_name
         cell.backgroundColor = .clear
         
         // Configure the cell...
@@ -67,11 +68,14 @@ class ChildTableViewController: UITableViewController {
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BehaviorsViewController,
-            let row = ChildTableView.indexPathForSelectedRow?.row {
-                print(childrenArray[row].childName)
-                destination.passedName = childrenArray[row].childName
+    /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showchildSegue" else { return }
+        
+        if let destination = segue.destination as? BehaviorsViewController {
+            if let selectedRow = tableView.indexPathForSelectedRow {
+                tableView.deselectRow(at: selectedRow, animated: true)
+                destination.passedName = child[selectedRow.row].child_name
             }
-    }
+        }
+    }*/
 }

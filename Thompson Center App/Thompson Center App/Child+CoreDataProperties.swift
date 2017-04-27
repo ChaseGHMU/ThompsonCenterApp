@@ -17,7 +17,7 @@ extension Child {
     }
 
     @NSManaged public var birthday: NSDate
-    @NSManaged public var child_name: String?
+    @NSManaged public var child_name: String
     @NSManaged public var doctor_name: String?
     @NSManaged public var medication: String?
     @NSManaged public var activity: Activities?

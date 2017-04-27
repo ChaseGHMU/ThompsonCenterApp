@@ -13,6 +13,7 @@ class OutbreaksTableViewController: UITableViewController {
     var passedName = ""
     
     @IBOutlet weak var name: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = passedName

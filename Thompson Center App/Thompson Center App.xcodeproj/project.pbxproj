@@ -15,6 +15,16 @@
 		94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94026A031EA04CC0004A0E23 /* SleepViewController.swift */; };
 		94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94026A051EA04CCF004A0E23 /* ToiletTrainingViewController.swift */; };
 		94026A081EA04CF1004A0E23 /* BehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94026A071EA04CF1004A0E23 /* BehaviorViewController.swift */; };
+		9436450D1EB26E5A002F98C8 /* Behavior+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645051EB26E5A002F98C8 /* Behavior+CoreDataClass.swift */; };
+		9436450E1EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645061EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift */; };
+		9436450F1EB26E5A002F98C8 /* Activities+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645071EB26E5A002F98C8 /* Activities+CoreDataClass.swift */; };
+		943645101EB26E5A002F98C8 /* Activities+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645081EB26E5A002F98C8 /* Activities+CoreDataProperties.swift */; };
+		943645111EB26E5A002F98C8 /* Child+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645091EB26E5A002F98C8 /* Child+CoreDataClass.swift */; };
+		943645121EB26E5A002F98C8 /* Child+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9436450A1EB26E5A002F98C8 /* Child+CoreDataProperties.swift */; };
+		943645131EB26E5A002F98C8 /* Sleep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9436450B1EB26E5A002F98C8 /* Sleep+CoreDataClass.swift */; };
+		943645141EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9436450C1EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift */; };
+		943645181EB2791C002F98C8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645171EB2791C002F98C8 /* Model.swift */; };
+		943E2F5A1EB1293F00102623 /* BehaviorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E2F591EB1293F00102623 /* BehaviorsViewController.swift */; };
 		949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F8C1E89C43600BC8746 /* AppDelegate.swift */; };
 		949B5F8F1E89C43600BC8746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F8E1E89C43600BC8746 /* ViewController.swift */; };
 		949B5F921E89C43600BC8746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F901E89C43600BC8746 /* Main.storyboard */; };
@@ -33,6 +43,16 @@
 		94026A031EA04CC0004A0E23 /* SleepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
 		94026A051EA04CCF004A0E23 /* ToiletTrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToiletTrainingViewController.swift; sourceTree = "<group>"; };
 		94026A071EA04CF1004A0E23 /* BehaviorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorViewController.swift; sourceTree = "<group>"; };
+		943645051EB26E5A002F98C8 /* Behavior+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Behavior+CoreDataClass.swift"; sourceTree = "<group>"; };
+		943645061EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Behavior+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		943645071EB26E5A002F98C8 /* Activities+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activities+CoreDataClass.swift"; sourceTree = "<group>"; };
+		943645081EB26E5A002F98C8 /* Activities+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activities+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		943645091EB26E5A002F98C8 /* Child+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9436450A1EB26E5A002F98C8 /* Child+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9436450B1EB26E5A002F98C8 /* Sleep+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9436450C1EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		943645171EB2791C002F98C8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		943E2F591EB1293F00102623 /* BehaviorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorsViewController.swift; sourceTree = "<group>"; };
 		949B5F891E89C43600BC8746 /* Thompson Center App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thompson Center App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		949B5F8C1E89C43600BC8746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		949B5F8E1E89C43600BC8746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		943645041EB26E4A002F98C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				943645051EB26E5A002F98C8 /* Behavior+CoreDataClass.swift */,
+				943645061EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift */,
+				943645071EB26E5A002F98C8 /* Activities+CoreDataClass.swift */,
+				943645081EB26E5A002F98C8 /* Activities+CoreDataProperties.swift */,
+				943645091EB26E5A002F98C8 /* Child+CoreDataClass.swift */,
+				9436450A1EB26E5A002F98C8 /* Child+CoreDataProperties.swift */,
+				9436450B1EB26E5A002F98C8 /* Sleep+CoreDataClass.swift */,
+				9436450C1EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift */,
+				943645171EB2791C002F98C8 /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		949B5F801E89C43600BC8746 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +110,7 @@
 		949B5F8B1E89C43600BC8746 /* Thompson Center App */ = {
 			isa = PBXGroup;
 			children = (
+				943645041EB26E4A002F98C8 /* Model */,
 				940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */,
 				949B5F8C1E89C43600BC8746 /* AppDelegate.swift */,
 				949B5F8E1E89C43600BC8746 /* ViewController.swift */,
@@ -90,6 +127,7 @@
 				949B5F9B1E89C43600BC8746 /* Info.plist */,
 				949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */,
 				94C9B2F21EAE6B6300526FEB /* Data.swift */,
+				943E2F591EB1293F00102623 /* BehaviorsViewController.swift */,
 			);
 			path = "Thompson Center App";
 			sourceTree = "<group>";
@@ -167,15 +205,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				94026A001EA04C95004A0E23 /* OutbreakInfoViewController.swift in Sources */,
+				9436450D1EB26E5A002F98C8 /* Behavior+CoreDataClass.swift in Sources */,
+				9436450F1EB26E5A002F98C8 /* Activities+CoreDataClass.swift in Sources */,
 				940269F81EA04BBC004A0E23 /* OutbreaksTableViewController.swift in Sources */,
+				943645121EB26E5A002F98C8 /* Child+CoreDataProperties.swift in Sources */,
 				94026A021EA04CAF004A0E23 /* FormsViewController.swift in Sources */,
 				940269F61EA04B70004A0E23 /* ChildTableViewController.swift in Sources */,
+				943645101EB26E5A002F98C8 /* Activities+CoreDataProperties.swift in Sources */,
 				949B5F8F1E89C43600BC8746 /* ViewController.swift in Sources */,
+				943645131EB26E5A002F98C8 /* Sleep+CoreDataClass.swift in Sources */,
 				949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */,
+				9436450E1EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift in Sources */,
 				94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */,
 				94C9B2F31EAE6B6300526FEB /* Data.swift in Sources */,
+				943645111EB26E5A002F98C8 /* Child+CoreDataClass.swift in Sources */,
 				94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */,
 				940269FE1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift in Sources */,
+				943645141EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift in Sources */,
+				943E2F5A1EB1293F00102623 /* BehaviorsViewController.swift in Sources */,
+				943645181EB2791C002F98C8 /* Model.swift in Sources */,
 				94026A081EA04CF1004A0E23 /* BehaviorViewController.swift in Sources */,
 				949B5F951E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld in Sources */,
 			);

@@ -1,9 +1,9 @@
 //
 //  Model.swift
-//  CoreDataRelationships
+//  Thompson Center App
 //
-//  Created by Shawn Moore on 3/5/17.
-//  Copyright © 2017 Tech Innovator. All rights reserved.
+//  Created by Chase Allen on 4/13/17.
+//  Copyright © 2017 Chase J Allen. All rights reserved.
 //
 
 import UIKit
