@@ -12,6 +12,8 @@ class BehaviorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Behavior"
 
         // Do any additional setup after loading the view.
     }

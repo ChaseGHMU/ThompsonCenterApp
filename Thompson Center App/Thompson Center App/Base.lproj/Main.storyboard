@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EGy-Kc-NxD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EGy-Kc-NxD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -80,9 +80,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-kS-MGC">
-                                <rect key="frame" x="151" y="593" width="46" height="30"/>
+                                <rect key="frame" x="106" y="593" width="162" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="createButton:" destination="B7d-zM-nwb" eventType="touchUpInside" id="QZW-JY-Un2"/>
                                 </connections>
@@ -126,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="730.39999999999998" y="-895.50224887556226"/>
         </scene>
-        <!--Child Table View Controller-->
+        <!--Children-->
         <scene sceneID="9Q7-oq-2vq">
             <objects>
                 <tableViewController id="KzZ-QM-5DH" customClass="ChildTableViewController" customModule="Thompson_Center_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,8 +153,9 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="XbR-nX-igc">
+                    <navigationItem key="navigationItem" title="Children" id="XbR-nX-igc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="g9Z-KT-7bI">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="B7d-zM-nwb" kind="show" id="Dnw-En-x98"/>
                             </connections>
@@ -166,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="746.39999999999998" y="-23.838080959520241"/>
         </scene>
-        <!--Outbreaks Table View Controller-->
+        <!--Attributes-->
         <scene sceneID="yi3-yC-tzO">
             <objects>
                 <tableViewController id="YQR-Rg-XIg" customClass="OutbreaksTableViewController" customModule="Thompson_Center_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,8 +194,9 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="njm-PK-yaR">
+                    <navigationItem key="navigationItem" title="Attributes" id="njm-PK-yaR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fnq-as-1Yj">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <segue destination="16O-i6-xk7" kind="show" id="ckH-0P-I3F"/>
                             </connections>
@@ -486,6 +491,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rvt-bW-uNd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -504,6 +510,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yW8-hP-I5l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46662285923957825" green="0.96803939342498779" blue="0.98432767391204834" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

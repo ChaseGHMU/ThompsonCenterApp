@@ -12,6 +12,8 @@ class ToiletTrainingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Toilet"
 
         // Do any additional setup after loading the view.
     }
