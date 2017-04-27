@@ -9,10 +9,13 @@
 import UIKit
 
 class OutbreaksTableViewController: UITableViewController {
-
+    
+    var passedName = ""
+    
+    @IBOutlet weak var name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        name.text = passedName
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
