@@ -20,7 +20,7 @@ class BehaviorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        severitySlider.maximumValue = 100.0
+       // severitySlider.maximumValue = 100.0
         // Do any additional setup after loading the view.
     }
     

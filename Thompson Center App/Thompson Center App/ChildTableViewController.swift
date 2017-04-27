@@ -11,14 +11,9 @@ class ChildTableViewController: UITableViewController {
     
     var child: [Child] = []
     
-    @IBOutlet var ChildTableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Children"
-        
-        ChildTableView.dataSource = self
-        ChildTableView.delegate = self
         
         let backgroundImage = UIImageView(image: UIImage(named: "newThompsonImage.png"))
         backgroundImage.contentMode = .scaleAspectFit
@@ -46,14 +41,11 @@ class ChildTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(child[indexPath.row].child_name)
-        //performSegue(withIdentifier: "showChildSegue", sender: self)
-
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        dateFormatter.dateStyle = .medium
         
         cell.textLabel?.text = child[indexPath.row].child_name
         cell.backgroundColor = .clear
@@ -68,14 +60,11 @@ class ChildTableViewController: UITableViewController {
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showchildSegue" else { return }
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BehaviorsViewController {
             if let selectedRow = tableView.indexPathForSelectedRow {
-                tableView.deselectRow(at: selectedRow, animated: true)
                 destination.passedName = child[selectedRow.row].child_name
             }
         }
-    }*/
+    }
 }

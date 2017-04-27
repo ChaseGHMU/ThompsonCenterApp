@@ -10,11 +10,12 @@ import UIKit
 
 class BehaviorsViewController: UIViewController {
     
-    var passedName:String = ""
+    var passedName:String?
     
     @IBOutlet weak var name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         name.text = passedName
         // Do any additional setup after loading the view.
     }

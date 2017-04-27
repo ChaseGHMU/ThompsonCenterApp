@@ -116,6 +116,7 @@
 				949B5F8E1E89C43600BC8746 /* ViewController.swift */,
 				949B5F901E89C43600BC8746 /* Main.storyboard */,
 				94026A071EA04CF1004A0E23 /* BehaviorViewController.swift */,
+				943E2F591EB1293F00102623 /* BehaviorsViewController.swift */,
 				94026A051EA04CCF004A0E23 /* ToiletTrainingViewController.swift */,
 				94026A031EA04CC0004A0E23 /* SleepViewController.swift */,
 				94026A011EA04CAF004A0E23 /* FormsViewController.swift */,
@@ -127,7 +128,6 @@
 				949B5F9B1E89C43600BC8746 /* Info.plist */,
 				949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */,
 				94C9B2F21EAE6B6300526FEB /* Data.swift */,
-				943E2F591EB1293F00102623 /* BehaviorsViewController.swift */,
 			);
 			path = "Thompson Center App";
 			sourceTree = "<group>";
