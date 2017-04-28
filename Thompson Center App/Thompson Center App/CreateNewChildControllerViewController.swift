@@ -31,7 +31,6 @@ class CreateNewChildControllerViewController: UIViewController {
     
     
     @IBAction func createButton(_ sender: UIButton) {
-        print(childBirthdayInput.date)
         if let childName = childNameInput.text,
             let doctorName = physicianNameInput.text,
             let meds = medicationInput.text {
