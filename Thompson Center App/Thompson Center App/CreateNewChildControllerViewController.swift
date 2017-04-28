@@ -20,6 +20,7 @@ class CreateNewChildControllerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Add Child"
         
         // Do any additional setup after loading the view.
     }
@@ -29,8 +30,11 @@ class CreateNewChildControllerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func dismissButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
-    @IBAction func createButton(_ sender: UIButton) {
+    @IBAction func createButton(_ sender: UIBarButtonItem) {
         if let childName = childNameInput.text,
             let doctorName = physicianNameInput.text,
             let meds = medicationInput.text {
@@ -38,8 +42,8 @@ class CreateNewChildControllerViewController: UIViewController {
                 context.insert(child)
             }
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-            self.navigationController?.popViewController(animated: true)
         }
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

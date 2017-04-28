@@ -38,6 +38,7 @@ public class Sleep: NSManagedObject {
         self.startTime = startTime
         self.endTime = endTime
         self.time_woken_up = Int64(timeWokenUp)
+        self.type = "Sleep"
     }
     
 }

@@ -43,5 +43,6 @@ public class Behavior: NSManagedObject {
         self.endTime = endTime
         self.severity = Int64(severity)
         self.behavior = behavior
+        self.type = "Behavior"
     }
 }

@@ -11,5 +11,20 @@ import CoreData
 
 @objc(Activities)
 public class Activities: NSManagedObject {
-
+    var sleepArray:[Sleep]? {
+        return self.sleep?.allObjects as? [Sleep]
+    }
+    
+    var behaviorArray:[Behavior]? {
+        return self.behavior?.allObjects as? [Behavior]
+    }
+    
+    convenience init?(type: String) {
+        
+        guard let context = Model.sharedInstance.managedContext else { return nil }
+        
+        self.init(entity: Activities.entity(), insertInto: context)
+        
+        self.type = type
+    }
 }

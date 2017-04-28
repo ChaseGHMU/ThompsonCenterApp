@@ -16,6 +16,7 @@ extension Activities {
         return NSFetchRequest<Activities>(entityName: "Activities")
     }
 
+    @NSManaged public var type: String?
     @NSManaged public var behavior: NSSet?
     @NSManaged public var child: Child?
     @NSManaged public var sleep: NSSet?

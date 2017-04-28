@@ -16,10 +16,11 @@ extension Behavior {
         return NSFetchRequest<Behavior>(entityName: "Behavior")
     }
 
-    @NSManaged public var behavior: String?
+    @NSManaged public var behavior: String
     @NSManaged public var end_time: NSDate
     @NSManaged public var severity: Int64
     @NSManaged public var start_time: NSDate
+    @NSManaged public var type: String
     @NSManaged public var behavior_activity: Activities?
 
 }

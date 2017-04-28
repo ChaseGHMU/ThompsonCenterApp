@@ -26,14 +26,19 @@ class BehaviorViewController: UIViewController {
     
     @IBAction
     func submitPressed() {
-        let behavior = Behavior()
+        if let text = behaviorTextField.text{
+            let activity = Activities(type: "Behavior")
+            if let input = Behavior(startTime: startDatePicker.date, endTime: endDatePicker.date, severity: Int(severitySlider.value), behavior: text){
+//              behavior.behavior = text
+//              behavior.severity = Int64(severitySlider.value)
+//              behavior.start_time = startDatePicker.date as NSDate
+//              behavior.end_time = endDatePicker.date as NSDate
+                context.insert(input)
+                activity?.addToBehavior(input)
+                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            }
+        }
         
-        behavior.behavior = behaviorTextField.text
-        behavior.severity = Int64(severitySlider.value)
-        behavior.start_time = startDatePicker.date as NSDate
-        behavior.end_time = endDatePicker.date as NSDate
-        
-        context.insert(behavior)
         navigationController!.popViewController(animated: true) // goes back
     }
 }

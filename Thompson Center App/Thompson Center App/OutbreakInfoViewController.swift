@@ -9,10 +9,20 @@
 import UIKit
 
 class OutbreakInfoViewController: UIViewController {
-
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    
+    var desLabel = ""
+    var endTimeLabel = ""
+    var startTimeLabel = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        descriptionLabel.text = desLabel
+        endTime.text = endTimeLabel
+        startTime.text = startTimeLabel
         // Do any additional setup after loading the view.
     }
 

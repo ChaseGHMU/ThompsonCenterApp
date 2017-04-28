@@ -19,6 +19,7 @@ extension Sleep {
     @NSManaged public var end_time: NSDate
     @NSManaged public var start_time: NSDate
     @NSManaged public var time_woken_up: Int64
+    @NSManaged public var type: String
     @NSManaged public var sleep_activity: Activities?
 
 }

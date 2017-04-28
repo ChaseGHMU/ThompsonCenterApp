@@ -39,8 +39,11 @@ class SleepViewController: UIViewController {
     
     @IBAction func submitData(_ sender: Any) {
         if let wTimes = Int(sliderLabel.text!){
+            let activities = Activities(type: "Sleep")
             if let sleep = Sleep(startTime: startDate.date, endTime: endDate.date, timeWokenUp: wTimes){
                 context.insert(sleep)
+                print(sleep)
+                activities?.addToSleep(sleep)
             }
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             self.navigationController?.popViewController(animated: true)
