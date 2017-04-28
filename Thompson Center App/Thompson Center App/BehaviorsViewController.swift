@@ -12,6 +12,7 @@ class BehaviorsViewController: UIViewController {
     
     var passedName:String?
     
+    @IBOutlet weak var behaviorsTableView: UITableView!
     @IBOutlet weak var name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()

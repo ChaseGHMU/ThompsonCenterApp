@@ -66,6 +66,15 @@ class Model {
         }
     }
     
+    func fetchActivities() -> [Activities] {
+        do {
+            let array = try managedContext?.fetch(Activities.fetchRequest()) ?? []
+            return array
+        } catch {
+            return []
+        }
+    }
+    
     func saveContext() {
         guard let context = managedContext,
             context.hasChanges else { return }
