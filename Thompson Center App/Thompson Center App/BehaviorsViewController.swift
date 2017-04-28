@@ -53,16 +53,40 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            print(activities[section].sleepArray?.count ?? 0)
-            return activities[section].sleepArray?.count ?? 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "behaviorCell", for: indexPath)
         
-        if let sleep = activities[indexPath.section].sleepArray?[indexPath.row]{
-            cell.textLabel?.text = sleep.type
-            cell.backgroundColor = .clear
+//        if let activity = activities[indexPath.section].sleepArray?.count{
+//            switch activity {
+//            case 0:
+//                if let sleep = activities[indexPath.section].sleepArray?[indexPath.row]{
+//                    cell.textLabel?.text = sleep.type
+//                    cell.backgroundColor = .clear
+//                }
+//            case 1:
+//                if let behavior = activities[indexPath.section].behaviorArray?[indexPath.row]{
+//                    cell.textLabel?.text = behavior.type
+//                    cell.backgroundColor = .clear
+//                }
+//            default:
+//                cell.textLabel?.text = "Default"
+//                cell.backgroundColor = .clear
+//            }
+//        }
+        if activities[indexPath.section].sleepArray?.count == 1{
+            if let sleep = activities[indexPath.section].sleepArray?[indexPath.row]{
+                cell.textLabel?.text = sleep.type
+                cell.backgroundColor = .clear
+            }
+        }
+        if activities[indexPath.section].behaviorArray?.count == 1 {
+            if let behavior = activities[indexPath.section].behaviorArray?[indexPath.row]{
+                cell.textLabel?.text = behavior.type
+                cell.backgroundColor = .clear
+            }
         }
         
         return cell
@@ -74,12 +98,23 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? OutbreakInfoViewController {
-            if let selectedRow = behaviorsTableView.indexPathForSelectedRow,
-                let activity = activities[selectedRow.section].sleepArray?[selectedRow.row]{
-                destination.desLabel = activity.type
-                destination.endTimeLabel = dateFormatter.string(from: activity.endTime)
-                destination.startTimeLabel = dateFormatter.string(from: activity.endTime)
+        
+        if let destination = segue.destination as? OutbreakInfoViewController,
+            let selectedRow = behaviorsTableView.indexPathForSelectedRow{
+            if activities[selectedRow.section].sleepArray?.count == 1{
+                if let activity = activities[selectedRow.section].sleepArray?[selectedRow.row]{
+                    destination.desLabel = activity.type
+                    destination.endTimeLabel = dateFormatter.string(from: activity.endTime)
+                    destination.startTimeLabel = dateFormatter.string(from: activity.endTime)
+                }
+            }
+            
+            if activities[selectedRow.section].sleepArray?.count == 0 {
+                if let behavior = activities[selectedRow.section].behaviorArray?[selectedRow.row]{
+                        destination.desLabel = behavior.type
+                        destination.endTimeLabel = dateFormatter.string(from: behavior.startTime)
+                        destination.startTimeLabel = dateFormatter.string(from: behavior.endTime)
+                }
             }
         }
     }
