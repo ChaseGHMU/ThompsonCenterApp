@@ -331,6 +331,9 @@
                             </datePicker>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bHz-g4-ED6">
                                 <rect key="frame" x="33" y="527" width="309" height="14"/>
+                                <connections>
+                                    <action selector="sliderLabelConnection:" destination="dYO-4X-FRw" eventType="valueChanged" id="Vjx-Nw-ecy"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUW-oo-RMp">
                                 <rect key="frame" x="164" y="585" width="46" height="30"/>

@@ -27,6 +27,9 @@ class SleepViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sliderLabelConnection(_ sender: Any) {
+    }
+    
     @IBAction func submitData(_ sender: Any) {
     }
 
