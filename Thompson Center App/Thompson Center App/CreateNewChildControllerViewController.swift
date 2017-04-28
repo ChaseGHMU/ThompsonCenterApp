@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateNewChildControllerViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class CreateNewChildControllerViewController: UIViewController {
     @IBOutlet weak var physicianNameInput: UITextField!
     @IBOutlet weak var medicationInput: UITextField!
     
+    let context: NSManagedObjectContext = .shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,9 @@ class CreateNewChildControllerViewController: UIViewController {
         if let childName = childNameInput.text,
             let doctorName = physicianNameInput.text,
             let meds = medicationInput.text {
-            Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds)
+            if let child = Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds){
+                context.insert(child)
+            }
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             self.navigationController?.popViewController(animated: true)
         }

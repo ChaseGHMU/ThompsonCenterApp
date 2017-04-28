@@ -329,15 +329,6 @@
                                     <!--2017-04-17 17:22:40 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-y7-69I">
-                                <rect key="frame" x="16" y="462" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Times Woken Up:
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bHz-g4-ED6">
                                 <rect key="frame" x="33" y="527" width="309" height="14"/>
                             </slider>
@@ -345,7 +336,26 @@
                                 <rect key="frame" x="164" y="585" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submitData:" destination="dYO-4X-FRw" eventType="touchUpInside" id="ysF-mW-B6U"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="III-mS-6sj">
+                                <rect key="frame" x="166" y="484" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-y7-69I">
+                                <rect key="frame" x="16" y="447" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Times Woken Up:
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -359,6 +369,12 @@
                             <constraint firstItem="bHz-g4-ED6" firstAttribute="leading" secondItem="Cbj-X1-joy" secondAttribute="leadingMargin" constant="19" id="try-YK-Rpe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="endDate" destination="8g4-1z-fRr" id="NOK-tS-uRf"/>
+                        <outlet property="sliderLabel" destination="III-mS-6sj" id="Njp-9k-tF3"/>
+                        <outlet property="startDate" destination="6kh-B0-th9" id="6i5-hn-7vQ"/>
+                        <outlet property="timesWokenUpSlider" destination="bHz-g4-ED6" id="gce-tX-SlJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRo-bg-1X0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,6 +454,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-KH-wcT">
                                 <rect key="frame" x="164" y="532" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submitPressed" destination="P3q-XT-W1o" eventType="touchUpInside" id="C24-JT-oWr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -470,6 +489,12 @@
                             <constraint firstItem="oT4-zw-u4n" firstAttribute="top" secondItem="Ywe-5f-hCs" secondAttribute="bottom" constant="44" id="yky-wV-eVW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="behaviorTextField" destination="oT4-zw-u4n" id="X5I-c8-4gg"/>
+                        <outlet property="endDatePicker" destination="7HP-RE-bSR" id="oSb-r4-p5L"/>
+                        <outlet property="severitySlider" destination="MPG-qs-zXo" id="8yk-cA-74m"/>
+                        <outlet property="startDatePicker" destination="ZfJ-ak-guo" id="l5h-Af-yob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23v-1e-NC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

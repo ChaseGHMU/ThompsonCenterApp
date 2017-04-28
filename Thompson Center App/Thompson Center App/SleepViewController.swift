@@ -10,6 +10,12 @@ import UIKit
 
 class SleepViewController: UIViewController {
 
+    @IBOutlet weak var startDate: UIDatePicker!
+    @IBOutlet weak var endDate: UIDatePicker!
+    
+    @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var timesWokenUpSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +26,9 @@ class SleepViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    @IBAction func submitData(_ sender: Any) {
+    }
 
     /*
     // MARK: - Navigation
