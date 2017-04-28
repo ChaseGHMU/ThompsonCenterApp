@@ -44,6 +44,7 @@ class SleepViewController: UIViewController {
             }
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             self.navigationController?.popViewController(animated: true)
+            
         }
     }
     
