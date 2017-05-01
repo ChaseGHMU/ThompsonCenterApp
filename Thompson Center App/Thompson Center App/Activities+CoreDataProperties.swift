@@ -2,7 +2,7 @@
 //  Activities+CoreDataProperties.swift
 //  Thompson Center App
 //
-//  Created by Chase Allen on 4/27/17.
+//  Created by Chase Allen on 5/1/17.
 //  Copyright © 2017 Chase J Allen. All rights reserved.
 //
 
@@ -16,7 +16,8 @@ extension Activities {
         return NSFetchRequest<Activities>(entityName: "Activities")
     }
 
-    @NSManaged public var type: String?
+    @NSManaged public var type: String
+    @NSManaged public var child_name: String
     @NSManaged public var behavior: NSSet?
     @NSManaged public var child: Child?
     @NSManaged public var sleep: NSSet?

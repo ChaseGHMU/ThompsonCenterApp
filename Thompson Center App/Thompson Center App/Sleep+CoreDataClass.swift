@@ -30,7 +30,7 @@ public class Sleep: NSManagedObject {
         }
     }
     
-    convenience init?(startTime: Date, endTime: Date, timeWokenUp: Int ) {
+    convenience init?(startTime: Date, endTime: Date, timeWokenUp: Int, childName: String ) {
         guard let context = Model.sharedInstance.managedContext else { return nil }
         
         self.init(entity: Sleep.entity(), insertInto: context)
@@ -39,6 +39,7 @@ public class Sleep: NSManagedObject {
         self.endTime = endTime
         self.time_woken_up = Int64(timeWokenUp)
         self.type = "Sleep"
+        self.child_name = childName
     }
     
 }

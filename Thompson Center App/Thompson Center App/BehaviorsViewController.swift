@@ -10,7 +10,7 @@ import UIKit
 
 class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var passedName:String?
+    var passedName:String = ""
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -30,7 +30,6 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
         behaviorsTableView.dataSource = self
         self.title = "Activities"
         self.navigationItem.rightBarButtonItem = addButton
-        
         let backgroundImage = UIImageView(image: UIImage(named: "newThompsonImage.png"))
         backgroundImage.contentMode = .scaleAspectFit
         behaviorsTableView.backgroundView = backgroundImage
@@ -59,63 +58,49 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "behaviorCell", for: indexPath)
         
-//        if let activity = activities[indexPath.section].sleepArray?.count{
-//            switch activity {
-//            case 0:
-//                if let sleep = activities[indexPath.section].sleepArray?[indexPath.row]{
-//                    cell.textLabel?.text = sleep.type
-//                    cell.backgroundColor = .clear
-//                }
-//            case 1:
-//                if let behavior = activities[indexPath.section].behaviorArray?[indexPath.row]{
-//                    cell.textLabel?.text = behavior.type
-//                    cell.backgroundColor = .clear
-//                }
-//            default:
-//                cell.textLabel?.text = "Default"
-//                cell.backgroundColor = .clear
-//            }
-//        }
-        if activities[indexPath.section].sleepArray?.count == 1{
+        //display Sleep if it exists in this spot
+        if activities[indexPath.section].sleepArray?.count == 1 {
             if let sleep = activities[indexPath.section].sleepArray?[indexPath.row]{
                 cell.textLabel?.text = sleep.type
                 cell.backgroundColor = .clear
             }
         }
-        if activities[indexPath.section].behaviorArray?.count == 1 {
-            if let behavior = activities[indexPath.section].behaviorArray?[indexPath.row]{
-                cell.textLabel?.text = behavior.type
-                cell.backgroundColor = .clear
-            }
+
+        //display Behavior if it exists in this spot
+        if activities[indexPath.section].behaviorArray?.count == 1{
+                if let behavior = activities[indexPath.section].behaviorArray?[indexPath.row]{
+                        cell.textLabel?.text = behavior.type
+                        cell.backgroundColor = .clear
+                }
         }
-        
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(activities[indexPath.row])
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? OutbreakInfoViewController,
-            let selectedRow = behaviorsTableView.indexPathForSelectedRow{
+        let selectedRow = behaviorsTableView.indexPathForSelectedRow{
+            
             if activities[selectedRow.section].sleepArray?.count == 1{
                 if let activity = activities[selectedRow.section].sleepArray?[selectedRow.row]{
                     destination.desLabel = activity.type
                     destination.endTimeLabel = dateFormatter.string(from: activity.endTime)
                     destination.startTimeLabel = dateFormatter.string(from: activity.endTime)
-                }
-            }
+                }//end if let
+            }//end if
             
             if activities[selectedRow.section].sleepArray?.count == 0 {
                 if let behavior = activities[selectedRow.section].behaviorArray?[selectedRow.row]{
                         destination.desLabel = behavior.type
                         destination.endTimeLabel = dateFormatter.string(from: behavior.startTime)
                         destination.startTimeLabel = dateFormatter.string(from: behavior.endTime)
-                }
-            }
+                }//end if let
+            }//end if
+            
+        }//end destination segue
+        
+        if let formDestination = segue.destination as? FormsViewController{
+            formDestination.passedName = passedName
         }
     }
 

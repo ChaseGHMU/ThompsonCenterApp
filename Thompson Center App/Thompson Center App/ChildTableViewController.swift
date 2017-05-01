@@ -55,13 +55,11 @@ class ChildTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BehaviorsViewController {
+        if let destination = segue.destination as? BehaviorsViewController{
             if let selectedRow = tableView.indexPathForSelectedRow {
                 destination.passedName = child[selectedRow.row].child_name
             }

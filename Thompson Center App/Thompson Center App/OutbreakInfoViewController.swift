@@ -9,7 +9,7 @@
 import UIKit
 
 class OutbreakInfoViewController: UIViewController {
-    
+    var passedName: String?
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startTime: UILabel!

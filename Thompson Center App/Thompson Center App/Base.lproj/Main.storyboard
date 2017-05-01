@@ -376,7 +376,7 @@
                                     <!--2017-04-17 17:22:40 +0000-->
                                 </date>
                             </datePicker>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bHz-g4-ED6">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="bHz-g4-ED6">
                                 <rect key="frame" x="33" y="527" width="309" height="14"/>
                                 <connections>
                                     <action selector="sliderLabelConnection:" destination="dYO-4X-FRw" eventType="valueChanged" id="Vjx-Nw-ecy"/>

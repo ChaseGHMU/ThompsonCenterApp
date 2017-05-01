@@ -19,12 +19,13 @@ public class Activities: NSManagedObject {
         return self.behavior?.allObjects as? [Behavior]
     }
     
-    convenience init?(type: String) {
+    convenience init?(type: String, childName: String) {
         
         guard let context = Model.sharedInstance.managedContext else { return nil }
         
         self.init(entity: Activities.entity(), insertInto: context)
         
         self.type = type
+        self.child_name = childName
     }
 }

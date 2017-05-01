@@ -2,7 +2,7 @@
 //  Sleep+CoreDataProperties.swift
 //  Thompson Center App
 //
-//  Created by Chase Allen on 4/27/17.
+//  Created by Chase Allen on 5/1/17.
 //  Copyright © 2017 Chase J Allen. All rights reserved.
 //
 
@@ -20,6 +20,7 @@ extension Sleep {
     @NSManaged public var start_time: NSDate
     @NSManaged public var time_woken_up: Int64
     @NSManaged public var type: String
+    @NSManaged public var child_name: String
     @NSManaged public var sleep_activity: Activities?
 
 }

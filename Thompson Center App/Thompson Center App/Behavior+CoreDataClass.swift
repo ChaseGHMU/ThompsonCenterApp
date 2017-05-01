@@ -34,7 +34,7 @@ public class Behavior: NSManagedObject {
         }
     }
     
-    convenience init?(startTime: Date, endTime: Date, severity: Int, behavior: String ) {
+    convenience init?(startTime: Date, endTime: Date, severity: Int, behavior: String, childName: String) {
         guard let context = Model.sharedInstance.managedContext else { return nil }
         
         self.init(entity: Behavior.entity(), insertInto: context)
@@ -44,5 +44,6 @@ public class Behavior: NSManagedObject {
         self.severity = Int64(severity)
         self.behavior = behavior
         self.type = "Behavior"
+        self.child_name = childName
     }
 }

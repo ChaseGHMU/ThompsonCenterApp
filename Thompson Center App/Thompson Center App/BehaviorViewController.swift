@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class BehaviorViewController: UIViewController {
-
+    var passedName:String = ""
     @IBOutlet var behaviorTextField: UITextField!
     @IBOutlet var severitySlider: UISlider!
     @IBOutlet var startDatePicker: UIDatePicker!
@@ -20,25 +20,26 @@ class BehaviorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // severitySlider.maximumValue = 100.0
-        // Do any additional setup after loading the view.
     }
     
     @IBAction
     func submitPressed() {
         if let text = behaviorTextField.text{
-            let activity = Activities(type: "Behavior")
-            if let input = Behavior(startTime: startDatePicker.date, endTime: endDatePicker.date, severity: Int(severitySlider.value), behavior: text){
-//              behavior.behavior = text
-//              behavior.severity = Int64(severitySlider.value)
-//              behavior.start_time = startDatePicker.date as NSDate
-//              behavior.end_time = endDatePicker.date as NSDate
-                context.insert(input)
-                activity?.addToBehavior(input)
-                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            if text.isEmpty {
+                let alert = UIAlertController(title: "Error", message: "All forms must be filled in.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                if let input = Behavior(startTime: startDatePicker.date, endTime: endDatePicker.date, severity: Int(severitySlider.value), behavior: text, childName: passedName){
+                    let activity = Activities(type: "Behavior", childName: passedName)
+                    context.insert(input)
+                    activity?.addToBehavior(input)
+                    (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                    navigationController!.popViewController(animated: true)
+                    
+                }
             }
         }
-        
-        navigationController!.popViewController(animated: true) // goes back
     }
 }
