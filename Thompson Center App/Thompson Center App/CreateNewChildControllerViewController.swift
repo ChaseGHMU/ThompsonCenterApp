@@ -39,7 +39,7 @@ class CreateNewChildControllerViewController: UIViewController {
         if let childName = childNameInput.text,
             let doctorName = physicianNameInput.text,
             let meds = medicationInput.text {
-                if childName.isEmpty && doctorName.isEmpty && meds.isEmpty {
+                if childName.isEmpty || doctorName.isEmpty || meds.isEmpty{
                     let alert = UIAlertController(title: "Error", message: "All forms must be filled in.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)

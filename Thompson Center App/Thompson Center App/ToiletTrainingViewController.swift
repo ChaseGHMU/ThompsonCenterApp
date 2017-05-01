@@ -10,13 +10,10 @@ import UIKit
 
 class ToiletTrainingViewController: UIViewController {
 
-    var passedName:String?
+    var passedName:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let passedName = passedName{
-            print("Toilet Controller: \(passedName)")
-        }
         // Do any additional setup after loading the view.
     }
 
