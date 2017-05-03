@@ -9,7 +9,7 @@
 import UIKit
 
 class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+
     var passedName:String = ""
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -18,14 +18,14 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
         return formatter
     }()
     var activities: [Activities] = []
-    
+
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var addFormButton: UIButton!
     @IBOutlet weak var behaviorsTableView: UITableView!
     @IBOutlet weak var name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         behaviorsTableView.delegate = self
         behaviorsTableView.dataSource = self
         self.title = "Activities"
@@ -33,7 +33,7 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
         let backgroundImage = UIImageView(image: UIImage(named: "newThompsonImage.png"))
         backgroundImage.contentMode = .scaleAspectFit
         behaviorsTableView.backgroundView = backgroundImage
-        
+
         name.text = passedName
         // Do any additional setup after loading the view.
     }
@@ -52,7 +52,9 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        if(activities[section].child_name == passedName){return 1}
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,13 +71,13 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
         //display Behavior if it exists in this spot
         if activities[indexPath.section].behaviorArray?.count == 1{
                 if let behavior = activities[indexPath.section].behaviorArray?[indexPath.row]{
-                        cell.textLabel?.text = behavior.type
+                        cell.textLabel?.text = behavior.behavior
                         cell.backgroundColor = .clear
                 }
         }
         return cell
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? OutbreakInfoViewController,

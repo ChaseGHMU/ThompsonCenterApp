@@ -38,7 +38,6 @@ class Model {
         }
     }
     
-    
     func fetchSleep() -> [Sleep] {
         do {
             let array = try managedContext?.fetch(Sleep.fetchRequest()) ?? []
