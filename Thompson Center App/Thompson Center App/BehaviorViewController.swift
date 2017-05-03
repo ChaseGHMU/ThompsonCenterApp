@@ -16,6 +16,7 @@ class BehaviorViewController: UIViewController {
     @IBOutlet var startDatePicker: UIDatePicker!
     @IBOutlet var endDatePicker: UIDatePicker!
     
+    @IBOutlet weak var sliderLabel: UILabel!
     let context: NSManagedObjectContext = .shared
     
     override func viewDidLoad() {

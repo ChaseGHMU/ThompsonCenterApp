@@ -22,6 +22,10 @@ class CreateNewChildControllerViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Add Child"
         
+        if let font = UIFont(name: "HelveticaNeue", size: 20){
+            self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: font]
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -37,13 +41,13 @@ class CreateNewChildControllerViewController: UIViewController {
     @IBAction func createButton(_ sender: UIBarButtonItem) {
         
         if let childName = childNameInput.text,
-            let doctorName = physicianNameInput.text,
-            let meds = medicationInput.text {
-                if childName.isEmpty || doctorName.isEmpty || meds.isEmpty{
-                    let alert = UIAlertController(title: "Error", message: "All forms must be filled in.", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }else{
+        let doctorName = physicianNameInput.text,
+        let meds = medicationInput.text {
+            if childName.isEmpty || doctorName.isEmpty || meds.isEmpty{
+                let alert = UIAlertController(title: "Error", message: "All forms must be filled in.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
                 if let child = Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds){
                     context.insert(child)
                     (UIApplication.shared.delegate as? AppDelegate)?.saveContext()

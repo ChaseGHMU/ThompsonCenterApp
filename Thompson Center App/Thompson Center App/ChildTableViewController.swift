@@ -15,9 +15,18 @@ class ChildTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Children"
         
-        let backgroundImage = UIImageView(image: UIImage(named: "newThompsonImage.png"))
+        let backgroundImage = UIImageView(image: UIImage(named: "ThompsonBackgroundImage.png"))
         backgroundImage.contentMode = .scaleAspectFit
         self.tableView.backgroundView = backgroundImage
+        
+        child = Model.sharedInstance.fetchChildren()
+        if self.child.count ==  0{
+            let alert = UIAlertController(title: "Warning", message: "You have no children added. Please add a child.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 20)!]
         
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             child = (try? context.fetch(Child.fetchRequest())) ?? []
@@ -39,17 +48,15 @@ class ChildTableViewController: UITableViewController {
         return child.count
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = child[indexPath.row].child_name
-        cell.backgroundColor = .clear
+        cell.textLabel?.textAlignment = .center
+        cell.accessoryType = .disclosureIndicator
+        //cell.backgroundColor = .clear
         
-        // Configure the cell...
         
         return cell
     }

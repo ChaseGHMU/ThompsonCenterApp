@@ -22,7 +22,6 @@ class SleepViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sliderLabelConnection(timesWokenUpSlider)
-        print("Sleep Controller: \(passedName)")
         // Do any additional setup after loading the view.
     }
 
@@ -42,7 +41,6 @@ class SleepViewController: UIViewController {
             let activities = Activities(type: "Sleep", childName: passedName)
             if let sleep = Sleep(startTime: startDate.date, endTime: endDate.date, timeWokenUp: wTimes, childName: passedName){
                 context.insert(sleep)
-                print(sleep)
                 activities?.addToSleep(sleep)
             }
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()

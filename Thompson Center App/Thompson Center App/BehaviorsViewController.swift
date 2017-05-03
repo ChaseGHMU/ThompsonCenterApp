@@ -30,7 +30,7 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
         behaviorsTableView.dataSource = self
         self.title = "Activities"
         self.navigationItem.rightBarButtonItem = addButton
-        let backgroundImage = UIImageView(image: UIImage(named: "newThompsonImage.png"))
+        let backgroundImage = UIImageView(image: UIImage(named: "ThompsonBackgroundImage.png"))
         backgroundImage.contentMode = .scaleAspectFit
         behaviorsTableView.backgroundView = backgroundImage
 
