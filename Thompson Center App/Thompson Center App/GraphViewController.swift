@@ -12,12 +12,15 @@ class GraphViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var behaviorGraphView: BehaviorGraphView!
     
+    var passedName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Graphs"
-
         // Do any additional setup after loading the view.
+        graphView.passedName = passedName
+        behaviorGraphView.passedName = passedName
     }
 
     override func didReceiveMemoryWarning() {

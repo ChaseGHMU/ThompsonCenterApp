@@ -104,6 +104,10 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
         if let formDestination = segue.destination as? FormsViewController{
             formDestination.passedName = passedName
         }
+        
+        if let graphDestination = segue.destination as? GraphViewController{
+            graphDestination.passedName = passedName
+        }
     }
 
 }

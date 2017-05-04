@@ -305,6 +305,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="behaviorGraphView" destination="E0m-GU-KDE" id="tN5-K3-kJn"/>
                         <outlet property="graphView" destination="k6L-qt-Czj" id="xRA-Qt-iQE"/>
                     </connections>
                 </viewController>
