@@ -23,7 +23,7 @@ class GraphView: UIView {
         
         let width = rect.width
         let height = rect.height
-        
+
         for rows in graphPoints{
             graphArray.append(Int(rows.time_woken_up))
         }
