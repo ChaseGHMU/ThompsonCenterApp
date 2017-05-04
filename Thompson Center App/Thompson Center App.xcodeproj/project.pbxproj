@@ -113,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				943645041EB26E4A002F98C8 /* Model */,
+				949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */,
 				949B5F901E89C43600BC8746 /* Main.storyboard */,
 				94421A0C1EBAC577004EA252 /* GraphViewController.swift */,
 				94421A0A1EBAC3EF004EA252 /* GraphView.swift */,
@@ -126,10 +127,9 @@
 				94026A071EA04CF1004A0E23 /* BehaviorViewController.swift */,
 				94026A031EA04CC0004A0E23 /* SleepViewController.swift */,
 				940269FF1EA04C95004A0E23 /* OutbreakInfoViewController.swift */,
-				949B5F961E89C43600BC8746 /* Assets.xcassets */,
-				949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */,
 				949B5F9B1E89C43600BC8746 /* Info.plist */,
 				949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */,
+				949B5F961E89C43600BC8746 /* Assets.xcassets */,
 				94C9B2F21EAE6B6300526FEB /* Data.swift */,
 			);
 			path = "Thompson Center App";

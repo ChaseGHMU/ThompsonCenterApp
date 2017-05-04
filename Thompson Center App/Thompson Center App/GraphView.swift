@@ -14,12 +14,20 @@ class GraphView: UIView {
     @IBInspectable var startColor: UIColor = UIColor.red
     @IBInspectable var endColor: UIColor = UIColor.green
     
-    var graphPoints:[Int] = [4, 2, 6, 4, 5, 8, 3]
+    var passedName = ""
+    
+    var graphPoints:[Sleep] = Model.sharedInstance.fetchSleep()
+    var graphArray:[Int] = []
     
     override func draw(_ rect: CGRect) {
         
         let width = rect.width
         let height = rect.height
+        
+        for rows in graphPoints{
+            graphArray.append(Int(rows.time_woken_up))
+        }
+        print(graphArray)
         
         let margin:CGFloat = 20.0
         let columnXPoint = { (column:Int) -> CGFloat in
@@ -34,7 +42,7 @@ class GraphView: UIView {
         let topBorder:CGFloat = 60
         let bottomBorder:CGFloat = 50
         let graphHeight = height - topBorder - bottomBorder
-        let maxValue = graphPoints.max()
+        let maxValue = graphArray.max()
         let columnYPoint = { (graphPoint:Int) -> CGFloat in
             var y:CGFloat = CGFloat(graphPoint) /
                 CGFloat(maxValue!) * graphHeight
@@ -79,13 +87,13 @@ class GraphView: UIView {
         let graphPath = UIBezierPath()
         //go to start of line
         graphPath.move(to: CGPoint(x:columnXPoint(0),
-                                   y:columnYPoint(graphPoints[0])))
+                                   y:columnYPoint(graphArray[0])))
         
         //add points for each item in the graphPoints array
         //at the correct (x, y) for the point
         for i in 1..<graphPoints.count {
             let nextPoint = CGPoint(x:columnXPoint(i),
-                                    y:columnYPoint(graphPoints[i]))
+                                    y:columnYPoint(graphArray[i]))
             graphPath.addLine(to: nextPoint)
         }
         context!.saveGState()
@@ -109,8 +117,8 @@ class GraphView: UIView {
             context.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: 0))
         }
         graphPath.lineWidth = 2.0
-        for i in 0..<graphPoints.count {
-            var point = CGPoint(x:columnXPoint(i), y:columnYPoint(graphPoints[i]))
+        for i in 0..<graphArray.count {
+            var point = CGPoint(x:columnXPoint(i), y:columnYPoint(graphArray[i]))
             point.x -= 5.0/2
             point.y -= 5.0/2
             

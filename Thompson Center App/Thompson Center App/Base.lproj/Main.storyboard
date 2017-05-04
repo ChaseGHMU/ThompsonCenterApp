@@ -539,8 +539,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MPG-qs-zXo">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="MPG-qs-zXo">
                                 <rect key="frame" x="89" y="183" width="272" height="31"/>
+                                <connections>
+                                    <action selector="sliderLabelConnection:" destination="P3q-XT-W1o" eventType="valueChanged" id="UQH-o3-G7m"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMP-ZX-amw">
                                 <rect key="frame" x="16" y="256" width="70" height="21"/>
@@ -625,13 +628,13 @@
                         <outlet property="behaviorTextField" destination="oT4-zw-u4n" id="X5I-c8-4gg"/>
                         <outlet property="endDatePicker" destination="7HP-RE-bSR" id="oSb-r4-p5L"/>
                         <outlet property="severitySlider" destination="MPG-qs-zXo" id="8yk-cA-74m"/>
-                        <outlet property="sliderLabel" destination="SXQ-ur-bd2" id="hke-qm-KkH"/>
+                        <outlet property="sliderLabel" destination="SXQ-ur-bd2" id="wwz-3S-qci"/>
                         <outlet property="startDatePicker" destination="ZfJ-ak-guo" id="l5h-Af-yob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23v-1e-NC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3286" y="842"/>
+            <point key="canvasLocation" x="3286" y="817"/>
         </scene>
         <!--Toilet Training View Controller-->
         <scene sceneID="zLs-Kq-Xzd">
@@ -649,7 +652,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKE-no-1SE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5162" y="-7"/>
+            <point key="canvasLocation" x="4697" y="-8"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="80L-uh-JUW">

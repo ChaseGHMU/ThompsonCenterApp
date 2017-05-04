@@ -22,6 +22,12 @@ class BehaviorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Behaviors"
+        sliderLabelConnection(severitySlider)
+    }
+    
+    @IBAction func sliderLabelConnection(_ sender: Any) {
+        let seletedValue = Int(severitySlider.value)
+        sliderLabel.text = String(seletedValue)
     }
     
     @IBAction
