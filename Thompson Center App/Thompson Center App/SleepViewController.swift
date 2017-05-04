@@ -22,6 +22,7 @@ class SleepViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sliderLabelConnection(timesWokenUpSlider)
+        self.title = "Sleep"
         // Do any additional setup after loading the view.
     }
 

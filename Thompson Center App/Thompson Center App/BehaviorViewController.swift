@@ -21,6 +21,7 @@ class BehaviorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Behaviors"
     }
     
     @IBAction
@@ -37,8 +38,7 @@ class BehaviorViewController: UIViewController {
                     context.insert(input)
                     activity?.addToBehavior(input)
                     (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-                    navigationController!.popViewController(animated: true)
-                    
+                    navigationController!.popViewController(animated: true)  
                 }
             }
         }

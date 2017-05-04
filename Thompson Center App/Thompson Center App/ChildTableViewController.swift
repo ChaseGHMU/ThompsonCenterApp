@@ -55,8 +55,6 @@ class ChildTableViewController: UITableViewController {
         cell.textLabel?.text = child[indexPath.row].child_name
         cell.textLabel?.textAlignment = .center
         cell.accessoryType = .disclosureIndicator
-        //cell.backgroundColor = .clear
-        
         
         return cell
     }

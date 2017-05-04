@@ -204,7 +204,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="7yw-Lj-s20" kind="show" id="OJx-jH-ivH"/>
+                                            <segue destination="4x0-Ya-A37" kind="show" id="gub-we-YdY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -235,7 +235,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljS-7r-c2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431" y="-6"/>
+            <point key="canvasLocation" x="2429.5999999999999" y="-6.746626686656672"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="lMa-LU-Ch5">
+            <objects>
+                <viewController id="4x0-Ya-A37" customClass="GraphViewController" customModule="Thompson_Center_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ted-b9-riN"/>
+                        <viewControllerLayoutGuide type="bottom" id="pu8-ed-81y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zsE-aS-S2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6L-qt-Czj" customClass="GraphView" customModule="Thompson_Center_App" customModuleProvider="target">
+                                <rect key="frame" x="41" y="112" width="293" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="oHW-Xx-W01"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.98209744691848755" green="0.91427868604660034" blue="0.86776548624038696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.99880307912826538" green="0.30553141236305237" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="k6L-qt-Czj" secondAttribute="trailing" constant="25" id="7lg-KY-QEj"/>
+                            <constraint firstItem="k6L-qt-Czj" firstAttribute="top" secondItem="ted-b9-riN" secondAttribute="bottom" constant="48" id="Jye-mR-eMO"/>
+                            <constraint firstItem="k6L-qt-Czj" firstAttribute="leading" secondItem="zsE-aS-S2t" secondAttribute="leadingMargin" constant="25" id="Ndb-BR-UmO"/>
+                            <constraint firstItem="pu8-ed-81y" firstAttribute="top" secondItem="k6L-qt-Czj" secondAttribute="bottom" constant="326" id="gPc-49-Y5Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="graphView" destination="k6L-qt-Czj" id="xRA-Qt-iQE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q82-We-njO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.5999999999999" y="817.24137931034488"/>
         </scene>
         <!--Outbreak Info View Controller-->
         <scene sceneID="giz-nw-Exa">

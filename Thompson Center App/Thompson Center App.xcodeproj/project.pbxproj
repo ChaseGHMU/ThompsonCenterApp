@@ -24,6 +24,8 @@
 		943645141EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9436450C1EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift */; };
 		943645181EB2791C002F98C8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645171EB2791C002F98C8 /* Model.swift */; };
 		943E2F5A1EB1293F00102623 /* BehaviorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E2F591EB1293F00102623 /* BehaviorsViewController.swift */; };
+		94421A0B1EBAC3EF004EA252 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94421A0A1EBAC3EF004EA252 /* GraphView.swift */; };
+		94421A0D1EBAC577004EA252 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94421A0C1EBAC577004EA252 /* GraphViewController.swift */; };
 		949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F8C1E89C43600BC8746 /* AppDelegate.swift */; };
 		949B5F921E89C43600BC8746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F901E89C43600BC8746 /* Main.storyboard */; };
 		949B5F951E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */; };
@@ -50,6 +52,8 @@
 		9436450C1EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		943645171EB2791C002F98C8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		943E2F591EB1293F00102623 /* BehaviorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorsViewController.swift; sourceTree = "<group>"; };
+		94421A0A1EBAC3EF004EA252 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		94421A0C1EBAC577004EA252 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		949B5F891E89C43600BC8746 /* Thompson Center App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thompson Center App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		949B5F8C1E89C43600BC8746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		949B5F911E89C43600BC8746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			children = (
 				943645041EB26E4A002F98C8 /* Model */,
 				949B5F901E89C43600BC8746 /* Main.storyboard */,
+				94421A0C1EBAC577004EA252 /* GraphViewController.swift */,
+				94421A0A1EBAC3EF004EA252 /* GraphView.swift */,
 				949B5F8C1E89C43600BC8746 /* AppDelegate.swift */,
 				940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */,
 				940269F51EA04B70004A0E23 /* ChildTableViewController.swift */,
@@ -200,6 +206,7 @@
 			files = (
 				94026A001EA04C95004A0E23 /* OutbreakInfoViewController.swift in Sources */,
 				9436450D1EB26E5A002F98C8 /* Behavior+CoreDataClass.swift in Sources */,
+				94421A0B1EBAC3EF004EA252 /* GraphView.swift in Sources */,
 				9436450F1EB26E5A002F98C8 /* Activities+CoreDataClass.swift in Sources */,
 				943645121EB26E5A002F98C8 /* Child+CoreDataProperties.swift in Sources */,
 				94026A021EA04CAF004A0E23 /* FormsViewController.swift in Sources */,
@@ -216,6 +223,7 @@
 				943645141EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift in Sources */,
 				943E2F5A1EB1293F00102623 /* BehaviorsViewController.swift in Sources */,
 				943645181EB2791C002F98C8 /* Model.swift in Sources */,
+				94421A0D1EBAC577004EA252 /* GraphViewController.swift in Sources */,
 				94026A081EA04CF1004A0E23 /* BehaviorViewController.swift in Sources */,
 				949B5F951E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld in Sources */,
 			);

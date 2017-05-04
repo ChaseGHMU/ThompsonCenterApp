@@ -1,20 +1,21 @@
 //
-//  ToiletTrainingViewController.swift
+//  GraphViewController.swift
 //  Thompson Center App
 //
-//  Created by Chase Allen on 4/13/17.
+//  Created by Chase Allen on 5/3/17.
 //  Copyright © 2017 Chase J Allen. All rights reserved.
 //
 
 import UIKit
 
-class ToiletTrainingViewController: UIViewController {
-
-    var passedName:String = ""
+class GraphViewController: UIViewController {
+    
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var graphView: GraphView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Toilet Training"
+
         // Do any additional setup after loading the view.
     }
 
