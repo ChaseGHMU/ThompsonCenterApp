@@ -1,5 +1,5 @@
 //
-//  GraphView.swift
+//  BehaviorGraphView.swift
 //  Thompson Center App
 //
 //  Created by Chase Allen on 5/3/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GraphView: UIView {
+class BehaviorGraphView: UIView {
 
     //1 - the properties for the gradient
     @IBInspectable var startColor: UIColor = UIColor.red
@@ -125,19 +125,19 @@ class GraphView: UIView {
         //top line
         linePath.move(to: CGPoint(x:margin, y: topBorder))
         linePath.addLine(to: CGPoint(x: width - margin,
-                                        y:topBorder))
+                                     y:topBorder))
         
         //center line
         linePath.move(to: CGPoint(x:margin,
-                                     y: graphHeight/2 + topBorder))
+                                  y: graphHeight/2 + topBorder))
         linePath.addLine(to: CGPoint(x:width - margin,
-                                        y:graphHeight/2 + topBorder))
+                                     y:graphHeight/2 + topBorder))
         
         //bottom line
         linePath.move(to: CGPoint(x:margin,
-                                     y:height - bottomBorder))
+                                  y:height - bottomBorder))
         linePath.addLine(to: CGPoint(x:width - margin,
-                                        y:height - bottomBorder))
+                                     y:height - bottomBorder))
         let color = UIColor(white: 0.0, alpha: 0.3)
         color.setStroke()
         

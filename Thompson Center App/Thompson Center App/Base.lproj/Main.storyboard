@@ -257,20 +257,51 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" red="0.98209744691848755" green="0.91427868604660034" blue="0.86776548624038696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.6639779806137085" green="0.87088370323181152" blue="0.89689838886260986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" red="0.99880307912826538" green="0.30553141236305237" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.34160089492797852" green="0.75307756662368774" blue="0.80872029066085815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-GU-KDE" customClass="BehaviorGraphView" customModule="Thompson_Center_App" customModuleProvider="target">
+                                <rect key="frame" x="41" y="372" width="293" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="TuP-AZ-OKF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.34160089490000001" green="0.75307756660000003" blue="0.80872029069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.66397798060000002" green="0.87088370319999997" blue="0.89689838889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sleep Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-4s-r2L">
+                                <rect key="frame" x="138" y="72" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Behavior Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0l-pt-MKa">
+                                <rect key="frame" x="123" y="323" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="k6L-qt-Czj" secondAttribute="trailing" constant="25" id="7lg-KY-QEj"/>
+                            <constraint firstItem="E0m-GU-KDE" firstAttribute="top" secondItem="k6L-qt-Czj" secondAttribute="bottom" constant="75" id="Hit-iZ-hbq"/>
                             <constraint firstItem="k6L-qt-Czj" firstAttribute="top" secondItem="ted-b9-riN" secondAttribute="bottom" constant="48" id="Jye-mR-eMO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E0m-GU-KDE" secondAttribute="trailing" constant="25" id="LUI-I7-IHJ"/>
                             <constraint firstItem="k6L-qt-Czj" firstAttribute="leading" secondItem="zsE-aS-S2t" secondAttribute="leadingMargin" constant="25" id="Ndb-BR-UmO"/>
-                            <constraint firstItem="pu8-ed-81y" firstAttribute="top" secondItem="k6L-qt-Czj" secondAttribute="bottom" constant="326" id="gPc-49-Y5Q"/>
+                            <constraint firstItem="E0m-GU-KDE" firstAttribute="leading" secondItem="zsE-aS-S2t" secondAttribute="leadingMargin" constant="25" id="b41-kb-qSw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -625,7 +656,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EGy-Kc-NxD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yW8-hP-I5l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yW8-hP-I5l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.34589689970016479" green="0.75307130813598633" blue="0.80870354175567627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
