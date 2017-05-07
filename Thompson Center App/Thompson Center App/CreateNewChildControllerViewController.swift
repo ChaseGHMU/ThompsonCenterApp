@@ -9,12 +9,14 @@
 import UIKit
 import CoreData
 
-class CreateNewChildControllerViewController: UIViewController {
+class CreateNewChildControllerViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var childNameInput: UITextField!
     @IBOutlet weak var childBirthdayInput: UIDatePicker!
     @IBOutlet weak var physicianNameInput: UITextField!
     @IBOutlet weak var medicationInput: UITextField!
+    @IBOutlet weak var childPicture: UIImageView!
+    @IBOutlet weak var uploadPicButton: UIButton!
     
     let context: NSManagedObjectContext = .shared
     
@@ -37,6 +39,39 @@ class CreateNewChildControllerViewController: UIViewController {
     @IBAction func dismissButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func uploadImage(_ sender: Any) {
+    
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        //Can change photoLibrary to Camera if we prefer
+        
+        image.allowsEditing = false
+        
+        self.present(image, animated: true) {
+            
+        }
+        
+    
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            childPicture.image = image
+        }
+        
+        else {
+            //error
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
     
     @IBAction func createButton(_ sender: UIBarButtonItem) {
         
