@@ -53,7 +53,7 @@ class ChildTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = child[indexPath.row].child_name
-        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.textAlignment = .left
         cell.accessoryType = .disclosureIndicator
         //cell.backgroundColor = .clear
         

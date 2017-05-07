@@ -30,6 +30,8 @@
 		949B5F971E89C43600BC8746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F961E89C43600BC8746 /* Assets.xcassets */; };
 		949B5F9A1E89C43600BC8746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */; };
 		94C9B2F31EAE6B6300526FEB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C9B2F21EAE6B6300526FEB /* Data.swift */; };
+		EB16A9991EBFA6F800C65CA9 /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16A9981EBFA6F800C65CA9 /* ChildTableViewCell.swift */; };
+		EB16A99B1EBFA8D000C65CA9 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16A99A1EBFA8D000C65CA9 /* ActivitiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		949B5F991E89C43600BC8746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		949B5F9B1E89C43600BC8746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94C9B2F21EAE6B6300526FEB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EB16A9981EBFA6F800C65CA9 /* ChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
+		EB16A99A1EBFA8D000C65CA9 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 			children = (
 				943645041EB26E4A002F98C8 /* Model */,
 				949B5F901E89C43600BC8746 /* Main.storyboard */,
+				EB16A99A1EBFA8D000C65CA9 /* ActivitiesTableViewCell.swift */,
+				EB16A9981EBFA6F800C65CA9 /* ChildTableViewCell.swift */,
 				949B5F8C1E89C43600BC8746 /* AppDelegate.swift */,
 				940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */,
 				940269F51EA04B70004A0E23 /* ChildTableViewController.swift */,
@@ -200,6 +206,7 @@
 			files = (
 				94026A001EA04C95004A0E23 /* OutbreakInfoViewController.swift in Sources */,
 				9436450D1EB26E5A002F98C8 /* Behavior+CoreDataClass.swift in Sources */,
+				EB16A99B1EBFA8D000C65CA9 /* ActivitiesTableViewCell.swift in Sources */,
 				9436450F1EB26E5A002F98C8 /* Activities+CoreDataClass.swift in Sources */,
 				943645121EB26E5A002F98C8 /* Child+CoreDataProperties.swift in Sources */,
 				94026A021EA04CAF004A0E23 /* FormsViewController.swift in Sources */,
@@ -211,6 +218,7 @@
 				94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */,
 				94C9B2F31EAE6B6300526FEB /* Data.swift in Sources */,
 				943645111EB26E5A002F98C8 /* Child+CoreDataClass.swift in Sources */,
+				EB16A9991EBFA6F800C65CA9 /* ChildTableViewCell.swift in Sources */,
 				94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */,
 				940269FE1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift in Sources */,
 				943645141EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift in Sources */,
