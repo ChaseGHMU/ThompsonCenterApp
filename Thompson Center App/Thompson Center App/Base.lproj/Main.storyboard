@@ -204,7 +204,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="4x0-Ya-A37" kind="show" id="gub-we-YdY"/>
+                                            <segue destination="7yw-Lj-s20" kind="show" id="Z2j-Wu-V4h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -249,36 +249,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6L-qt-Czj" customClass="GraphView" customModule="Thompson_Center_App" customModuleProvider="target">
-                                <rect key="frame" x="41" y="112" width="293" height="185"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="oHW-Xx-W01"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" red="0.6639779806137085" green="0.87088370323181152" blue="0.89689838886260986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" red="0.34160089492797852" green="0.75307756662368774" blue="0.80872029066085815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-GU-KDE" customClass="BehaviorGraphView" customModule="Thompson_Center_App" customModuleProvider="target">
-                                <rect key="frame" x="41" y="372" width="293" height="185"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="TuP-AZ-OKF"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" red="0.34160089490000001" green="0.75307756660000003" blue="0.80872029069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" red="0.66397798060000002" green="0.87088370319999997" blue="0.89689838889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sleep Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-4s-r2L">
                                 <rect key="frame" x="138" y="72" width="98" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -293,15 +263,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-GU-KDE" customClass="BehaviorGraphView" customModule="Thompson_Center_App" customModuleProvider="target">
+                                <rect key="frame" x="41" y="416" width="293" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="TuP-AZ-OKF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.34160089490000001" green="0.75307756660000003" blue="0.80872029069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.66397798060000002" green="0.87088370319999997" blue="0.89689838889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="k6L-qt-Czj" secondAttribute="trailing" constant="25" id="7lg-KY-QEj"/>
-                            <constraint firstItem="E0m-GU-KDE" firstAttribute="top" secondItem="k6L-qt-Czj" secondAttribute="bottom" constant="75" id="Hit-iZ-hbq"/>
-                            <constraint firstItem="k6L-qt-Czj" firstAttribute="top" secondItem="ted-b9-riN" secondAttribute="bottom" constant="48" id="Jye-mR-eMO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="E0m-GU-KDE" secondAttribute="trailing" constant="25" id="LUI-I7-IHJ"/>
-                            <constraint firstItem="k6L-qt-Czj" firstAttribute="leading" secondItem="zsE-aS-S2t" secondAttribute="leadingMargin" constant="25" id="Ndb-BR-UmO"/>
-                            <constraint firstItem="E0m-GU-KDE" firstAttribute="leading" secondItem="zsE-aS-S2t" secondAttribute="leadingMargin" constant="25" id="b41-kb-qSw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E0m-GU-KDE" secondAttribute="trailing" constant="25" id="eaL-rm-T59"/>
+                            <constraint firstItem="E0m-GU-KDE" firstAttribute="leading" secondItem="zsE-aS-S2t" secondAttribute="leadingMargin" constant="25" id="ykA-3Z-UIC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -353,12 +334,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6L-qt-Czj" customClass="GraphView" customModule="Thompson_Center_App" customModuleProvider="target">
+                                <rect key="frame" x="41" y="404" width="293" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="oHW-Xx-W01"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.6639779806137085" green="0.87088370323181152" blue="0.89689838886260986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.34160089492797852" green="0.75307756662368774" blue="0.80872029066085815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zmz-Ed-0Ec" firstAttribute="top" secondItem="k6L-qt-Czj" secondAttribute="bottom" constant="34" id="EyN-2a-NmO"/>
+                            <constraint firstItem="k6L-qt-Czj" firstAttribute="leading" secondItem="Htc-ae-bVm" secondAttribute="leadingMargin" constant="25" id="YOn-IB-NcY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k6L-qt-Czj" secondAttribute="trailing" constant="25" id="d0r-pP-oVE"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="SIe-D7-CPL" id="d7m-af-yES"/>
                         <outlet property="endTime" destination="WZa-HB-ZEI" id="G4h-jE-XCZ"/>
+                        <outlet property="graphView" destination="k6L-qt-Czj" id="rzm-RK-xcj"/>
                         <outlet property="startTime" destination="dQX-US-P3Z" id="bmZ-KH-76l"/>
                     </connections>
                 </viewController>

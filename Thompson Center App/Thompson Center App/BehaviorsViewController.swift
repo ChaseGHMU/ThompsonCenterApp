@@ -88,6 +88,7 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
                     destination.desLabel = activity.type
                     destination.endTimeLabel = dateFormatter.string(from: activity.endTime)
                     destination.startTimeLabel = dateFormatter.string(from: activity.endTime)
+                    destination.passedName = passedName
                 }//end if let
             }//end if
             
@@ -96,6 +97,7 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
                         destination.desLabel = behavior.type
                         destination.endTimeLabel = dateFormatter.string(from: behavior.startTime)
                         destination.startTimeLabel = dateFormatter.string(from: behavior.endTime)
+                        destination.passedName = passedName
                 }//end if let
             }//end if
             

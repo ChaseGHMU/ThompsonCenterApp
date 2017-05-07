@@ -9,10 +9,11 @@
 import UIKit
 
 class OutbreakInfoViewController: UIViewController {
-    var passedName: String?
+    var passedName = ""
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var graphView: GraphView!
     
     var desLabel = ""
     var endTimeLabel = ""
@@ -23,6 +24,8 @@ class OutbreakInfoViewController: UIViewController {
         descriptionLabel.text = desLabel
         endTime.text = endTimeLabel
         startTime.text = startTimeLabel
+        graphView.passedName = passedName
+        graphView.activity = desLabel
         // Do any additional setup after loading the view.
     }
 

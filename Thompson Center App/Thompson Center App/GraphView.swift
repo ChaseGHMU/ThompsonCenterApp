@@ -15,21 +15,36 @@ class GraphView: UIView {
     @IBInspectable var endColor: UIColor = UIColor.green
     
     var passedName = ""
+    var activity = ""
     
     var graphPoints:[Sleep] = Model.sharedInstance.fetchSleep()
     var graphArray:[Int] = []
+    
+    var behaviorGraphPoints:[Behavior] = Model.sharedInstance.fechBehavior()
     
     override func draw(_ rect: CGRect) {
         
         let width = rect.width
         let height = rect.height
-
-        for rows in graphPoints{
-            print(passedName)
-            if rows.child_name == passedName{
-                graphArray.append(Int(rows.time_woken_up))
+        print(activity)
+        print(passedName)
+        if activity == "Sleep"{
+            for rows in graphPoints{
+                print(passedName)
+                if rows.child_name == passedName{
+                    graphArray.append(Int(rows.time_woken_up))
+                }
             }
         }
+        
+        if activity == "Behavior"{
+            for rows in behaviorGraphPoints{
+                if rows.child_name == passedName{
+                    graphArray.append(Int(rows.severity))
+                }
+            }
+        }
+    
         print(graphArray)
         
         let margin:CGFloat = 20.0
