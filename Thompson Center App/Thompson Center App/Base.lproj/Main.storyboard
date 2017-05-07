@@ -22,44 +22,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6N-oL-Irm">
-                                <rect key="frame" x="16" y="124" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6N-oL-Irm">
+                                <rect key="frame" x="15" y="176" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Medication:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-jS-Weo">
-                                <rect key="frame" x="16" y="587" width="90" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-jS-Weo">
+                                <rect key="frame" x="14" y="323" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Physician Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPe-wN-Igg">
-                                <rect key="frame" x="158" y="535" width="192" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Physician Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPe-wN-Igg">
+                                <rect key="frame" x="149" y="242" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Current Medication" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uec-5g-Jz0">
-                                <rect key="frame" x="112" y="583" width="229" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Current Medication" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uec-5g-Jz0">
+                                <rect key="frame" x="112" y="318" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmX-hT-ZyO">
-                                <rect key="frame" x="16" y="185" width="69" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-EM-Vzd">
-                                <rect key="frame" x="93" y="173" width="266" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="514142404.69785601">
-                                    <!--2017-04-17 17:20:04 +0000-->
-                                </date>
-                            </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Child Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6T-Mv-ba9">
-                                <rect key="frame" x="74" y="124" width="269" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Child Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6T-Mv-ba9">
+                                <rect key="frame" x="73" y="171" width="269" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="269" id="66X-vi-xdm"/>
                                 </constraints>
@@ -67,68 +59,48 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Child Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zag-4x-liM">
-                                <rect key="frame" x="16" y="83" width="344" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Physician Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuJ-WQ-aVm">
-                                <rect key="frame" x="16" y="539" width="127" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Physician Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuJ-WQ-aVm">
+                                <rect key="frame" x="14" y="246" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdk-qP-nft">
-                                <rect key="frame" x="158" y="405" width="82" height="81"/>
+                                <rect key="frame" x="24" y="72" width="82" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Picture:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVK-KA-3hl">
-                                <rect key="frame" x="16" y="444" width="59" height="21"/>
+                                <rect key="frame" x="121" y="72" width="59" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDg-ka-kND">
-                                <rect key="frame" x="149" y="494" width="102" height="30"/>
+                                <rect key="frame" x="114" y="112" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Upload Picture"/>
                                 <connections>
                                     <action selector="uploadImage:" destination="B7d-zM-nwb" eventType="touchUpInside" id="dec-z3-oPA"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EDp-Yo-rP2">
-                                <rect key="frame" x="121" y="499" width="20" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmX-hT-ZyO">
+                                <rect key="frame" x="15" y="372" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-EM-Vzd">
+                                <rect key="frame" x="15" y="419" width="327" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="514142404.69785601">
+                                    <!--2017-04-17 17:20:04 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="YjW-EM-Vzd" firstAttribute="leading" secondItem="9ui-GL-ntI" secondAttribute="leadingMargin" constant="77" id="0Bv-Zh-gqG"/>
-                            <constraint firstItem="GuJ-WQ-aVm" firstAttribute="top" secondItem="fmX-hT-ZyO" secondAttribute="bottom" constant="234" id="D2w-0A-l36"/>
-                            <constraint firstItem="fmX-hT-ZyO" firstAttribute="leading" secondItem="9ui-GL-ntI" secondAttribute="leadingMargin" id="Dxa-JE-p1f"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uec-5g-Jz0" secondAttribute="trailing" constant="16" id="Ghq-AN-JcC"/>
-                            <constraint firstItem="EJT-jS-Weo" firstAttribute="top" secondItem="GuJ-WQ-aVm" secondAttribute="bottom" constant="56" id="Gtd-2J-cFS"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="EJT-jS-Weo" secondAttribute="leading" id="I9q-bg-NNC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DPe-wN-Igg" secondAttribute="trailing" constant="16" id="Itw-pt-EBH"/>
-                            <constraint firstItem="YjW-EM-Vzd" firstAttribute="top" secondItem="Y6T-Mv-ba9" secondAttribute="bottom" constant="46" id="MEs-gn-yOi"/>
-                            <constraint firstItem="YjW-EM-Vzd" firstAttribute="leading" secondItem="fmX-hT-ZyO" secondAttribute="trailing" constant="8" id="PTd-6r-IcX"/>
-                            <constraint firstItem="c6N-oL-Irm" firstAttribute="leading" secondItem="9ui-GL-ntI" secondAttribute="leadingMargin" id="VvX-Yi-eEY"/>
-                            <constraint firstItem="uec-5g-Jz0" firstAttribute="leading" secondItem="EJT-jS-Weo" secondAttribute="trailing" constant="8" id="aLG-Ln-KBE"/>
-                            <constraint firstItem="fmX-hT-ZyO" firstAttribute="top" secondItem="c6N-oL-Irm" secondAttribute="bottom" constant="55" id="ezV-ub-TOk"/>
-                            <constraint firstItem="uec-5g-Jz0" firstAttribute="top" secondItem="DPe-wN-Igg" secondAttribute="bottom" constant="47" id="fHG-d8-W4F"/>
-                            <constraint firstAttribute="trailing" secondItem="zag-4x-liM" secondAttribute="trailing" constant="15" id="fzJ-nQ-xhv"/>
-                            <constraint firstItem="Y6T-Mv-ba9" firstAttribute="leading" secondItem="c6N-oL-Irm" secondAttribute="trailing" constant="8" id="gxG-J7-zhe"/>
-                            <constraint firstItem="DPe-wN-Igg" firstAttribute="top" secondItem="YjW-EM-Vzd" secondAttribute="bottom" constant="39" id="h96-e3-WTd"/>
-                            <constraint firstItem="c6N-oL-Irm" firstAttribute="top" secondItem="zag-4x-liM" secondAttribute="bottom" constant="8" id="jCC-u7-XC0"/>
-                            <constraint firstItem="Y6T-Mv-ba9" firstAttribute="top" secondItem="zag-4x-liM" secondAttribute="bottom" constant="8" id="kSc-TY-Heu"/>
-                            <constraint firstItem="zag-4x-liM" firstAttribute="leading" secondItem="9ui-GL-ntI" secondAttribute="leading" constant="16" id="nZ2-eu-D3X"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YjW-EM-Vzd" secondAttribute="trailing" id="skp-Pz-t2z"/>
-                            <constraint firstItem="DPe-wN-Igg" firstAttribute="leading" secondItem="GuJ-WQ-aVm" secondAttribute="trailing" constant="8" id="uJG-Ev-pfQ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="GuJ-WQ-aVm" secondAttribute="leading" id="xZH-py-q3t"/>
-                            <constraint firstItem="zag-4x-liM" firstAttribute="top" secondItem="5Y2-mE-NUC" secondAttribute="bottom" constant="19" id="zge-F5-OLZ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sJk-vU-lS9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="IZN-10-lLW">
