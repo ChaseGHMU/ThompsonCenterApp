@@ -50,12 +50,11 @@ class ChildTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChildTableViewCell
         
-        cell.textLabel?.text = child[indexPath.row].child_name
-        cell.textLabel?.textAlignment = .center
-        cell.accessoryType = .disclosureIndicator
-        
+        cell.childName.text = child[indexPath.row].child_name
+        cell.childImage.image = #imageLiteral(resourceName: "ThompsonBackgroundImage")
+        cell.backgroundColor = .clear
         return cell
     }
     

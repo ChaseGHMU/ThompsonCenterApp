@@ -58,12 +58,13 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "behaviorCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "behaviorCell", for: indexPath) as! ActivitiesTableViewCell
         
         //display Sleep if it exists in this spot
         if activities[indexPath.section].sleepArray?.count == 1 {
             if let sleep = activities[indexPath.section].sleepArray?[indexPath.row]{
-                cell.textLabel?.text = sleep.type
+                cell.activity.text = sleep.type
+                cell.date.text = sleep.child_name
                 cell.backgroundColor = .clear
             }
         }
@@ -71,8 +72,9 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
         //display Behavior if it exists in this spot
         if activities[indexPath.section].behaviorArray?.count == 1{
                 if let behavior = activities[indexPath.section].behaviorArray?[indexPath.row]{
-                        cell.textLabel?.text = behavior.behavior
-                        cell.backgroundColor = .clear
+                    cell.activity.text = behavior.behavior
+                    cell.date.text = behavior.child_name
+                    cell.backgroundColor = .clear
                 }
         }
         return cell

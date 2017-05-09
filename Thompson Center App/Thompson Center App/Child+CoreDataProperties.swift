@@ -2,7 +2,7 @@
 //  Child+CoreDataProperties.swift
 //  Thompson Center App
 //
-//  Created by Chase Allen on 4/27/17.
+//  Created by Chase Allen on 5/9/17.
 //  Copyright © 2017 Chase J Allen. All rights reserved.
 //
 
@@ -18,8 +18,8 @@ extension Child {
 
     @NSManaged public var birthday: NSDate
     @NSManaged public var child_name: String
-    @NSManaged public var doctor_name: String?
-    @NSManaged public var medication: String?
+    @NSManaged public var doctor_name: String
+    @NSManaged public var medication: String
     @NSManaged public var activity: Activities?
 
 }

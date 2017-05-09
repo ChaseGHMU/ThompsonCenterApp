@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Foundation
 
 class CreateNewChildControllerViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -83,6 +84,7 @@ class CreateNewChildControllerViewController: UIViewController, UINavigationCont
                 alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }else{
+                
                 if let child = Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds){
                     context.insert(child)
                     (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
