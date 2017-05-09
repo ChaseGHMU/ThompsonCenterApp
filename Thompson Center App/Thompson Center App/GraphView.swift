@@ -26,11 +26,8 @@ class GraphView: UIView {
         
         let width = rect.width
         let height = rect.height
-        print(activity)
-        print(passedName)
         if activity == "Sleep"{
             for rows in graphPoints{
-                print(passedName)
                 if rows.child_name == passedName{
                     graphArray.append(Int(rows.time_woken_up))
                 }
@@ -44,8 +41,6 @@ class GraphView: UIView {
                 }
             }
         }
-    
-        print(graphArray)
         
         let margin:CGFloat = 20.0
         let columnXPoint = { (column:Int) -> CGFloat in

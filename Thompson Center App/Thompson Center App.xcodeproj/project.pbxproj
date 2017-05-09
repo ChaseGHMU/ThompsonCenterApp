@@ -25,7 +25,6 @@
 		943645181EB2791C002F98C8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645171EB2791C002F98C8 /* Model.swift */; };
 		943E2F5A1EB1293F00102623 /* BehaviorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E2F591EB1293F00102623 /* BehaviorsViewController.swift */; };
 		94421A0B1EBAC3EF004EA252 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94421A0A1EBAC3EF004EA252 /* GraphView.swift */; };
-		94421A0F1EBADB7B004EA252 /* BehaviorGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94421A0E1EBADB7B004EA252 /* BehaviorGraphView.swift */; };
 		9493C1EB1EC18D5800D70C0E /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C1EA1EC18D5800D70C0E /* ChildTableViewCell.swift */; };
 		9493C1ED1EC1901600D70C0E /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C1EC1EC1901600D70C0E /* ActivitiesTableViewCell.swift */; };
 		949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F8C1E89C43600BC8746 /* AppDelegate.swift */; };
@@ -54,7 +53,6 @@
 		943645171EB2791C002F98C8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		943E2F591EB1293F00102623 /* BehaviorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorsViewController.swift; sourceTree = "<group>"; };
 		94421A0A1EBAC3EF004EA252 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		94421A0E1EBADB7B004EA252 /* BehaviorGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorGraphView.swift; sourceTree = "<group>"; };
 		9493C1EA1EC18D5800D70C0E /* ChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
 		9493C1EC1EC1901600D70C0E /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		949B5F891E89C43600BC8746 /* Thompson Center App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thompson Center App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +116,6 @@
 				9493C1EC1EC1901600D70C0E /* ActivitiesTableViewCell.swift */,
 				9493C1EA1EC18D5800D70C0E /* ChildTableViewCell.swift */,
 				94421A0A1EBAC3EF004EA252 /* GraphView.swift */,
-				94421A0E1EBADB7B004EA252 /* BehaviorGraphView.swift */,
 				949B5F8C1E89C43600BC8746 /* AppDelegate.swift */,
 				940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */,
 				940269F51EA04B70004A0E23 /* ChildTableViewController.swift */,
@@ -221,7 +218,6 @@
 				9436450E1EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift in Sources */,
 				94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */,
 				943645111EB26E5A002F98C8 /* Child+CoreDataClass.swift in Sources */,
-				94421A0F1EBADB7B004EA252 /* BehaviorGraphView.swift in Sources */,
 				94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */,
 				9493C1ED1EC1901600D70C0E /* ActivitiesTableViewCell.swift in Sources */,
 				940269FE1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift in Sources */,

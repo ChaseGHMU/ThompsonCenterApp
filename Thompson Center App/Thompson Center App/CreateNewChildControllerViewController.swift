@@ -60,31 +60,21 @@ class CreateNewChildControllerViewController: UIViewController, UINavigationCont
         if let image = info[UIImagePickerControllerOriginalImage] as! UIImage!{
             childPicture.image = image
         }
-        
-        else {
-            //error
-        }
-
         self.dismiss(animated: true, completion: nil)
-        
     }
-    
-    
-    
-    
     
     @IBAction func createButton(_ sender: UIBarButtonItem) {
         
         if let childName = childNameInput.text,
         let doctorName = physicianNameInput.text,
-        let meds = medicationInput.text,
-        let imageData = UIImagePNGRepresentation(childPicture.image!) as NSData? {
-            if childName.isEmpty || doctorName.isEmpty || meds.isEmpty{
-                let alert = UIAlertController(title: "Error", message: "All forms must be filled in.", preferredStyle: UIAlertControllerStyle.alert)
+        let meds = medicationInput.text {
+            if childName.isEmpty || doctorName.isEmpty || meds.isEmpty || childPicture.image == nil{
+                let alert = UIAlertController(title: "Error", message: "All forms must be filled in and picture must be added.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }else{
-                if let child = Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds, childImage: imageData){
+                let imageData = UIImagePNGRepresentation(childPicture.image!) as NSData?
+                if let child = Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds, childImage: imageData!){
                     context.insert(child)
                     (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
                     self.dismiss(animated: true, completion: nil)
