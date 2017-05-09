@@ -21,7 +21,7 @@ public class Child: NSManagedObject {
         }
     }
 
-    convenience init?(date: Date, childName: String, doctorName: String, medication: String) {
+    convenience init?(date: Date, childName: String, doctorName: String, medication: String, childImage: NSData) {
         guard let context = Model.sharedInstance.managedContext else { return nil }
         
         self.init(entity: Child.entity(), insertInto: context)
@@ -30,7 +30,7 @@ public class Child: NSManagedObject {
         self.child_name = childName
         self.doctor_name = doctorName
         self.medication = medication
-        
+        self.child_image = childImage
     }
 }
 

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+
 class ChildTableViewController: UITableViewController {
     
     var child: [Child] = []
@@ -53,8 +55,15 @@ class ChildTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChildTableViewCell
         
         cell.childName.text = child[indexPath.row].child_name
-        cell.childImage.image = #imageLiteral(resourceName: "ThompsonBackgroundImage")
         cell.backgroundColor = .clear
+        cell.accessoryType = .disclosureIndicator
+        
+        if let imageNSData = child[indexPath.row].child_image {
+            let imageData = imageNSData as Data
+            let childImage = UIImage(data: imageData)
+            cell.childImage.image = childImage
+        }
+        
         return cell
     }
     
@@ -65,6 +74,14 @@ class ChildTableViewController: UITableViewController {
         if let destination = segue.destination as? BehaviorsViewController{
             if let selectedRow = tableView.indexPathForSelectedRow {
                 destination.passedName = child[selectedRow.row].child_name
+                destination.medicine = child[selectedRow.row].medication
+                destination.doctor = child[selectedRow.row].doctor_name
+                if let imageNSData = child[selectedRow.row].child_image {
+                    let imageData = imageNSData as Data
+                    let childImage = UIImage(data: imageData)
+                    destination.image = childImage
+                }
+                
             }
         }
     }

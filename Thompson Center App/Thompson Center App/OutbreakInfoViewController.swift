@@ -14,10 +14,12 @@ class OutbreakInfoViewController: UIViewController {
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var behaviorLabel: UILabel!
     
     var desLabel = ""
     var endTimeLabel = ""
     var startTimeLabel = ""
+    var behaviorInfoLabel = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class OutbreakInfoViewController: UIViewController {
         startTime.text = startTimeLabel
         graphView.passedName = passedName
         graphView.activity = desLabel
+        behaviorLabel.text = behaviorInfoLabel
         // Do any additional setup after loading the view.
     }
 

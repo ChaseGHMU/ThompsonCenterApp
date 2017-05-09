@@ -15,35 +15,19 @@ public class Behavior: NSManagedObject {
 //    @NSManaged public var end_time: NSDate?
 //    @NSManaged public var severity: Int64
 //    @NSManaged public var start_time: NSDate?
-    
-    var startTime:Date {
-        get{
-            return start_time as Date
-        }
-        set(newDate){
-            start_time = startTime as NSDate
-        }
-    }
-    
-    var endTime:Date {
-        get{
-            return end_time as Date
-        }
-        set(newDate){
-            end_time = endTime as NSDate
-        }
-    }
-    
-    convenience init?(startTime: Date, endTime: Date, severity: Int, behavior: String, childName: String) {
+
+
+    convenience init?(startTime:String, endTime: String, severity: Int, behavior: String, childName: String, dateAdded: String) {
         guard let context = Model.sharedInstance.managedContext else { return nil }
         
         self.init(entity: Behavior.entity(), insertInto: context)
         
-        self.startTime = startTime
-        self.endTime = endTime
+        self.start_time = startTime
+        self.end_time = endTime
         self.severity = Int64(severity)
         self.behavior = behavior
         self.type = "Behavior"
         self.child_name = childName
+        self.date_added = dateAdded
     }
 }
