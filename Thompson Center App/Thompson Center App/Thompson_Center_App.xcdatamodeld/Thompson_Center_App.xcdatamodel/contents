@@ -6,18 +6,21 @@
         <relationship name="behavior" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Behavior" inverseName="behavior_activity" inverseEntity="Behavior" syncable="YES"/>
         <relationship name="child" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="activity" inverseEntity="Child" syncable="YES"/>
         <relationship name="sleep" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sleep" inverseName="sleep_activity" inverseEntity="Sleep" syncable="YES"/>
+        <relationship name="toilet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Toilet" inverseName="toilet_activity" inverseEntity="Toilet" syncable="YES"/>
     </entity>
     <entity name="Behavior" representedClassName="Behavior" syncable="YES">
         <attribute name="behavior" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="child_name" attributeType="String" syncable="YES"/>
-        <attribute name="end_time" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date_added" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end_time" attributeType="String" syncable="YES"/>
         <attribute name="severity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="start_time" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="start_time" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="behavior_activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activities" inverseName="behavior" inverseEntity="Activities" syncable="YES"/>
     </entity>
     <entity name="Child" representedClassName="Child" syncable="YES">
         <attribute name="birthday" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="child_image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="child_name" attributeType="String" syncable="YES"/>
         <attribute name="doctor_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="medication" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,16 +28,27 @@
     </entity>
     <entity name="Sleep" representedClassName="Sleep" syncable="YES">
         <attribute name="child_name" attributeType="String" syncable="YES"/>
-        <attribute name="end_time" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="start_time" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date_added" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end_time" attributeType="String" syncable="YES"/>
+        <attribute name="start_time" attributeType="String" syncable="YES"/>
         <attribute name="time_woken_up" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="sleep_activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activities" inverseName="sleep" inverseEntity="Activities" syncable="YES"/>
     </entity>
+    <entity name="Toilet" representedClassName="Toilet" syncable="YES">
+        <attribute name="bowel_success" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="child_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_added" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num_accidents" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urine_success" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toilet_activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activities" inverseName="toilet" inverseEntity="Activities" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Activities" positionX="-504" positionY="63" width="128" height="120"/>
-        <element name="Behavior" positionX="-144" positionY="-22" width="128" height="150"/>
-        <element name="Child" positionX="-695" positionY="77" width="128" height="118"/>
-        <element name="Sleep" positionX="-144" positionY="171" width="128" height="135"/>
+        <element name="Activities" positionX="-540" positionY="198" width="128" height="135"/>
+        <element name="Behavior" positionX="-144" positionY="-22" width="128" height="165"/>
+        <element name="Child" positionX="-783" positionY="198" width="128" height="135"/>
+        <element name="Sleep" positionX="-144" positionY="171" width="128" height="150"/>
+        <element name="Toilet" positionX="-146" positionY="369" width="128" height="148"/>
     </elements>
 </model>

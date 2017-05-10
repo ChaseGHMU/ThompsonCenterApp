@@ -11,6 +11,20 @@ import CoreData
 
 
 class SleepViewController: UIViewController {
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        return formatter
+    }()
+    
+    let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter
+    }()
+    
+    let date = Date()
     var passedName: String = ""
     @IBOutlet weak var startDate: UIDatePicker!
     @IBOutlet weak var endDate: UIDatePicker!
@@ -39,8 +53,11 @@ class SleepViewController: UIViewController {
     
     @IBAction func submitData(_ sender: Any) {
         if let wTimes = Int(sliderLabel.text!){
+            let currentDate = dateFormatter.string(from: date)
             let activities = Activities(type: "Sleep", childName: passedName)
-            if let sleep = Sleep(startTime: startDate.date, endTime: endDate.date, timeWokenUp: wTimes, childName: passedName){
+            let startTime = timeFormatter.string(from: startDate.date)
+            let endTime = timeFormatter.string(from: endDate.date)
+            if let sleep = Sleep(startTime: startTime, endTime: endTime, timeWokenUp: wTimes, childName: passedName, dateAdded: currentDate) {
                 context.insert(sleep)
                 activities?.addToSleep(sleep)
             }

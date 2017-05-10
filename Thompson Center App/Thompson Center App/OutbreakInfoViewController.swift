@@ -14,10 +14,16 @@ class OutbreakInfoViewController: UIViewController {
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var behaviorLabel: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var graphDescriptionLabel: UILabel!
+    @IBOutlet weak var urineAndEndLabel: UILabel!
+    @IBOutlet weak var bowelAndStartLabel: UILabel!
     
     var desLabel = ""
     var endTimeLabel = ""
     var startTimeLabel = ""
+    var behaviorInfoLabel = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +32,24 @@ class OutbreakInfoViewController: UIViewController {
         startTime.text = startTimeLabel
         graphView.passedName = passedName
         graphView.activity = desLabel
+        behaviorLabel.text = behaviorInfoLabel
+        if desLabel == "Toilet Training"{
+            urineAndEndLabel.text = "Urine Success:"
+            bowelAndStartLabel.text = "Bowel Success:"
+        }
+        setupGraph()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupGraph(){
+        maxLabel.text = "\(String(describing: graphView.maxNum))"
+        if desLabel == "Sleep"{
+            graphDescriptionLabel.text = "Number of times woken up"
+        }else if desLabel == "Behavior"{
+            graphDescriptionLabel.text = "Severity"
+        }else{
+            graphDescriptionLabel.text = "Number of Accidents"
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,8 +16,10 @@ class GraphView: UIView {
     
     var passedName = ""
     var activity = ""
+    var maxNum: Int = 10
     
     var graphPoints:[Sleep] = Model.sharedInstance.fetchSleep()
+    var toiletPoints:[Toilet] = Model.sharedInstance.fetchToiletTraining()
     var graphArray:[Int] = []
     
     var behaviorGraphPoints:[Behavior] = Model.sharedInstance.fechBehavior()
@@ -26,11 +28,8 @@ class GraphView: UIView {
         
         let width = rect.width
         let height = rect.height
-        print(activity)
-        print(passedName)
         if activity == "Sleep"{
             for rows in graphPoints{
-                print(passedName)
                 if rows.child_name == passedName{
                     graphArray.append(Int(rows.time_woken_up))
                 }
@@ -44,8 +43,14 @@ class GraphView: UIView {
                 }
             }
         }
-    
-        print(graphArray)
+        
+        if activity == "Toilet Training"{
+            for rows in toiletPoints{
+                if rows.child_name == passedName{
+                    graphArray.append(Int(rows.num_accidents))
+                }
+            }
+        }
         
         let margin:CGFloat = 20.0
         let columnXPoint = { (column:Int) -> CGFloat in
@@ -60,10 +65,10 @@ class GraphView: UIView {
         let topBorder:CGFloat = 60
         let bottomBorder:CGFloat = 50
         let graphHeight = height - topBorder - bottomBorder
-        let maxValue = graphArray.max()
+        let maxValue = 10
         let columnYPoint = { (graphPoint:Int) -> CGFloat in
             var y:CGFloat = CGFloat(graphPoint) /
-                CGFloat(maxValue!) * graphHeight
+                CGFloat(maxValue) * graphHeight
             y = graphHeight + topBorder - y // Flip the graph
             return y
         }

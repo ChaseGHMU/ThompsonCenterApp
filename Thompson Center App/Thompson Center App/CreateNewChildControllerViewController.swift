@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Foundation
 
 class CreateNewChildControllerViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -17,7 +18,6 @@ class CreateNewChildControllerViewController: UIViewController, UINavigationCont
     @IBOutlet weak var medicationInput: UITextField!
     @IBOutlet weak var childPicture: UIImageView!
     @IBOutlet weak var uploadPicButton: UIButton!
-    
     let context: NSManagedObjectContext = .shared
     
     override func viewDidLoad() {
@@ -57,33 +57,25 @@ class CreateNewChildControllerViewController: UIViewController, UINavigationCont
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        if let image = info[UIImagePickerControllerOriginalImage] as! UIImage!{
             childPicture.image = image
+            childPicture.clipsToBounds = true
         }
-        
-        else {
-            //error
-        }
-        
         self.dismiss(animated: true, completion: nil)
-        
     }
-    
-    
-    
-    
     
     @IBAction func createButton(_ sender: UIBarButtonItem) {
         
         if let childName = childNameInput.text,
         let doctorName = physicianNameInput.text,
         let meds = medicationInput.text {
-            if childName.isEmpty || doctorName.isEmpty || meds.isEmpty{
-                let alert = UIAlertController(title: "Error", message: "All forms must be filled in.", preferredStyle: UIAlertControllerStyle.alert)
+            if childName.isEmpty || doctorName.isEmpty || meds.isEmpty || childPicture.image == nil{
+                let alert = UIAlertController(title: "Error", message: "All forms must be filled in and picture must be added.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }else{
-                if let child = Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds){
+                let imageData = UIImagePNGRepresentation(childPicture.image!) as NSData?
+                if let child = Child(date: childBirthdayInput.date, childName: childName, doctorName: doctorName, medication: meds, childImage: imageData!){
                     context.insert(child)
                     (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
                     self.dismiss(animated: true, completion: nil)

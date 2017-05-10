@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+
 class ChildTableViewController: UITableViewController {
     
     var child: [Child] = []
@@ -50,11 +52,17 @@ class ChildTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChildTableViewCell
         
-        cell.textLabel?.text = child[indexPath.row].child_name
-        cell.textLabel?.textAlignment = .center
+        cell.childName.text = child[indexPath.row].child_name
+        cell.backgroundColor = .clear
         cell.accessoryType = .disclosureIndicator
+        
+        if let imageNSData = child[indexPath.row].child_image {
+            let imageData = imageNSData as Data
+            let childImage = UIImage(data: imageData)
+            cell.childImage.image = childImage
+        }
         
         return cell
     }
@@ -66,6 +74,14 @@ class ChildTableViewController: UITableViewController {
         if let destination = segue.destination as? BehaviorsViewController{
             if let selectedRow = tableView.indexPathForSelectedRow {
                 destination.passedName = child[selectedRow.row].child_name
+                destination.medicine = child[selectedRow.row].medication
+                destination.doctor = child[selectedRow.row].doctor_name
+                if let imageNSData = child[selectedRow.row].child_image {
+                    let imageData = imageNSData as Data
+                    let childImage = UIImage(data: imageData)
+                    destination.image = childImage
+                }
+                
             }
         }
     }

@@ -25,14 +25,15 @@
 		943645181EB2791C002F98C8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943645171EB2791C002F98C8 /* Model.swift */; };
 		943E2F5A1EB1293F00102623 /* BehaviorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E2F591EB1293F00102623 /* BehaviorsViewController.swift */; };
 		94421A0B1EBAC3EF004EA252 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94421A0A1EBAC3EF004EA252 /* GraphView.swift */; };
-		94421A0D1EBAC577004EA252 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94421A0C1EBAC577004EA252 /* GraphViewController.swift */; };
-		94421A0F1EBADB7B004EA252 /* BehaviorGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94421A0E1EBADB7B004EA252 /* BehaviorGraphView.swift */; };
+		945D1CA91EC2D7DF002A84D7 /* Toilet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D1CA71EC2D7DF002A84D7 /* Toilet+CoreDataClass.swift */; };
+		945D1CAA1EC2D7DF002A84D7 /* Toilet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D1CA81EC2D7DF002A84D7 /* Toilet+CoreDataProperties.swift */; };
+		9493C1EB1EC18D5800D70C0E /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C1EA1EC18D5800D70C0E /* ChildTableViewCell.swift */; };
+		9493C1ED1EC1901600D70C0E /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C1EC1EC1901600D70C0E /* ActivitiesTableViewCell.swift */; };
 		949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F8C1E89C43600BC8746 /* AppDelegate.swift */; };
 		949B5F921E89C43600BC8746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F901E89C43600BC8746 /* Main.storyboard */; };
 		949B5F951E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */; };
 		949B5F971E89C43600BC8746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F961E89C43600BC8746 /* Assets.xcassets */; };
 		949B5F9A1E89C43600BC8746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */; };
-		94C9B2F31EAE6B6300526FEB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C9B2F21EAE6B6300526FEB /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +55,10 @@
 		943645171EB2791C002F98C8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		943E2F591EB1293F00102623 /* BehaviorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorsViewController.swift; sourceTree = "<group>"; };
 		94421A0A1EBAC3EF004EA252 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		94421A0C1EBAC577004EA252 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
-		94421A0E1EBADB7B004EA252 /* BehaviorGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviorGraphView.swift; sourceTree = "<group>"; };
+		945D1CA71EC2D7DF002A84D7 /* Toilet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Toilet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		945D1CA81EC2D7DF002A84D7 /* Toilet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Toilet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9493C1EA1EC18D5800D70C0E /* ChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
+		9493C1EC1EC1901600D70C0E /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		949B5F891E89C43600BC8746 /* Thompson Center App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thompson Center App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		949B5F8C1E89C43600BC8746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		949B5F911E89C43600BC8746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		949B5F961E89C43600BC8746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		949B5F991E89C43600BC8746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		949B5F9B1E89C43600BC8746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94C9B2F21EAE6B6300526FEB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,8 @@
 		943645041EB26E4A002F98C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				945D1CA71EC2D7DF002A84D7 /* Toilet+CoreDataClass.swift */,
+				945D1CA81EC2D7DF002A84D7 /* Toilet+CoreDataProperties.swift */,
 				943645051EB26E5A002F98C8 /* Behavior+CoreDataClass.swift */,
 				943645061EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift */,
 				943645071EB26E5A002F98C8 /* Activities+CoreDataClass.swift */,
@@ -115,9 +119,9 @@
 				943645041EB26E4A002F98C8 /* Model */,
 				949B5F981E89C43600BC8746 /* LaunchScreen.storyboard */,
 				949B5F901E89C43600BC8746 /* Main.storyboard */,
-				94421A0C1EBAC577004EA252 /* GraphViewController.swift */,
+				9493C1EC1EC1901600D70C0E /* ActivitiesTableViewCell.swift */,
+				9493C1EA1EC18D5800D70C0E /* ChildTableViewCell.swift */,
 				94421A0A1EBAC3EF004EA252 /* GraphView.swift */,
-				94421A0E1EBADB7B004EA252 /* BehaviorGraphView.swift */,
 				949B5F8C1E89C43600BC8746 /* AppDelegate.swift */,
 				940269FD1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift */,
 				940269F51EA04B70004A0E23 /* ChildTableViewController.swift */,
@@ -130,7 +134,6 @@
 				949B5F9B1E89C43600BC8746 /* Info.plist */,
 				949B5F931E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld */,
 				949B5F961E89C43600BC8746 /* Assets.xcassets */,
-				94C9B2F21EAE6B6300526FEB /* Data.swift */,
 			);
 			path = "Thompson Center App";
 			sourceTree = "<group>";
@@ -214,20 +217,21 @@
 				943645121EB26E5A002F98C8 /* Child+CoreDataProperties.swift in Sources */,
 				94026A021EA04CAF004A0E23 /* FormsViewController.swift in Sources */,
 				940269F61EA04B70004A0E23 /* ChildTableViewController.swift in Sources */,
+				945D1CA91EC2D7DF002A84D7 /* Toilet+CoreDataClass.swift in Sources */,
 				943645101EB26E5A002F98C8 /* Activities+CoreDataProperties.swift in Sources */,
 				943645131EB26E5A002F98C8 /* Sleep+CoreDataClass.swift in Sources */,
 				949B5F8D1E89C43600BC8746 /* AppDelegate.swift in Sources */,
+				9493C1EB1EC18D5800D70C0E /* ChildTableViewCell.swift in Sources */,
 				9436450E1EB26E5A002F98C8 /* Behavior+CoreDataProperties.swift in Sources */,
 				94026A041EA04CC0004A0E23 /* SleepViewController.swift in Sources */,
-				94C9B2F31EAE6B6300526FEB /* Data.swift in Sources */,
+				945D1CAA1EC2D7DF002A84D7 /* Toilet+CoreDataProperties.swift in Sources */,
 				943645111EB26E5A002F98C8 /* Child+CoreDataClass.swift in Sources */,
-				94421A0F1EBADB7B004EA252 /* BehaviorGraphView.swift in Sources */,
 				94026A061EA04CCF004A0E23 /* ToiletTrainingViewController.swift in Sources */,
+				9493C1ED1EC1901600D70C0E /* ActivitiesTableViewCell.swift in Sources */,
 				940269FE1EA04C5B004A0E23 /* CreateNewChildControllerViewController.swift in Sources */,
 				943645141EB26E5A002F98C8 /* Sleep+CoreDataProperties.swift in Sources */,
 				943E2F5A1EB1293F00102623 /* BehaviorsViewController.swift in Sources */,
 				943645181EB2791C002F98C8 /* Model.swift in Sources */,
-				94421A0D1EBAC577004EA252 /* GraphViewController.swift in Sources */,
 				94026A081EA04CF1004A0E23 /* BehaviorViewController.swift in Sources */,
 				949B5F951E89C43600BC8746 /* Thompson_Center_App.xcdatamodeld in Sources */,
 			);

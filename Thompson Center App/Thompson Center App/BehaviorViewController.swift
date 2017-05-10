@@ -10,6 +10,20 @@ import UIKit
 import CoreData
 
 class BehaviorViewController: UIViewController {
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        return formatter
+    }()
+    
+    let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter
+    }()
+    
+    let date = Date()
     var passedName:String = ""
     @IBOutlet var behaviorTextField: UITextField!
     @IBOutlet var severitySlider: UISlider!
@@ -23,6 +37,7 @@ class BehaviorViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Behaviors"
         sliderLabelConnection(severitySlider)
+        
     }
     
     @IBAction func sliderLabelConnection(_ sender: Any) {
@@ -32,6 +47,10 @@ class BehaviorViewController: UIViewController {
     
     @IBAction
     func submitPressed() {
+        let dateAdded = dateFormatter.string(from: date)
+        let startTime = timeFormatter.string(from: startDatePicker.date)
+        let endTime = timeFormatter.string(from: endDatePicker.date)
+        print(timeFormatter.string(from: startDatePicker.date))
         if let text = behaviorTextField.text{
             if text.isEmpty {
                 let alert = UIAlertController(title: "Error", message: "All forms must be filled in.", preferredStyle: UIAlertControllerStyle.alert)
@@ -39,7 +58,7 @@ class BehaviorViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
             else{
-                if let input = Behavior(startTime: startDatePicker.date, endTime: endDatePicker.date, severity: Int(severitySlider.value), behavior: text, childName: passedName){
+                if let input = Behavior(startTime: startTime, endTime: endTime, severity: Int(severitySlider.value), behavior: text, childName: passedName, dateAdded: dateAdded){
                     let activity = Activities(type: "Behavior", childName: passedName)
                     context.insert(input)
                     activity?.addToBehavior(input)

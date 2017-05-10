@@ -1,5 +1,5 @@
 //
-//  BehaviorGraphView.swift
+//  GraphView.swift
 //  Thompson Center App
 //
 //  Created by Chase Allen on 5/3/17.
@@ -8,26 +8,29 @@
 
 import UIKit
 
-class BehaviorGraphView: UIView {
+class SleepGraphView: UIView {
 
     //1 - the properties for the gradient
     @IBInspectable var startColor: UIColor = UIColor.red
     @IBInspectable var endColor: UIColor = UIColor.green
     
-    var graphPoints:[Behavior] = Model.sharedInstance.fechBehavior()
-    var graphArray:[Int] = []
     var passedName = ""
+    
+    var graphPoints:[Sleep] = Model.sharedInstance.fetchSleep()
+    var graphArray:[Int] = []
     
     override func draw(_ rect: CGRect) {
         
-        for row in graphPoints{
-            if row.child_name == passedName{
-                graphArray.append(Int(row.severity))
-            }
-        }
-        
         let width = rect.width
         let height = rect.height
+
+        for rows in graphPoints{
+            print(passedName)
+            if rows.child_name == passedName{
+                graphArray.append(Int(rows.time_woken_up))
+            }
+        }
+        print(graphArray)
         
         let margin:CGFloat = 20.0
         let columnXPoint = { (column:Int) -> CGFloat in
@@ -133,19 +136,19 @@ class BehaviorGraphView: UIView {
         //top line
         linePath.move(to: CGPoint(x:margin, y: topBorder))
         linePath.addLine(to: CGPoint(x: width - margin,
-                                     y:topBorder))
+                                        y:topBorder))
         
         //center line
         linePath.move(to: CGPoint(x:margin,
-                                  y: graphHeight/2 + topBorder))
+                                     y: graphHeight/2 + topBorder))
         linePath.addLine(to: CGPoint(x:width - margin,
-                                     y:graphHeight/2 + topBorder))
+                                        y:graphHeight/2 + topBorder))
         
         //bottom line
         linePath.move(to: CGPoint(x:margin,
-                                  y:height - bottomBorder))
-        linePath.addLine(to: CGPoint(x:width - margin,
                                      y:height - bottomBorder))
+        linePath.addLine(to: CGPoint(x:width - margin,
+                                        y:height - bottomBorder))
         let color = UIColor(white: 0.0, alpha: 0.3)
         color.setStroke()
         
