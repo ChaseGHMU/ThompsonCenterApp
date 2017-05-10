@@ -175,13 +175,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-6K-DVB">
-                                            <rect key="frame" x="26" y="8" width="50" height="50"/>
+                                            <rect key="frame" x="18" y="8" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="RgA-aR-iN0"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxq-Do-VaZ">
-                                            <rect key="frame" x="92" y="23" width="42" height="20.5"/>
+                                            <rect key="frame" x="84" y="23" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -193,7 +193,7 @@
                                         <constraint firstItem="Bxq-Do-VaZ" firstAttribute="centerY" secondItem="aZW-SB-hdg" secondAttribute="centerY" id="L7f-td-fQB"/>
                                         <constraint firstItem="Bxq-Do-VaZ" firstAttribute="leading" secondItem="CJh-6K-DVB" secondAttribute="trailing" constant="16" id="Ogh-f3-4lH"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="CJh-6K-DVB" secondAttribute="bottom" constant="-0.5" id="TGa-BO-noh"/>
-                                        <constraint firstItem="CJh-6K-DVB" firstAttribute="leading" secondItem="aZW-SB-hdg" secondAttribute="leadingMargin" constant="18" id="g5T-Lu-fb9"/>
+                                        <constraint firstItem="CJh-6K-DVB" firstAttribute="leading" secondItem="aZW-SB-hdg" secondAttribute="leadingMargin" constant="10" id="g5T-Lu-fb9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -453,12 +453,14 @@
                     </view>
                     <connections>
                         <outlet property="behaviorLabel" destination="cNm-8y-6jv" id="rHQ-4Q-59v"/>
+                        <outlet property="bowelAndStartLabel" destination="klT-qR-xu1" id="oQd-R1-Wzq"/>
                         <outlet property="descriptionLabel" destination="SIe-D7-CPL" id="d7m-af-yES"/>
                         <outlet property="endTime" destination="WZa-HB-ZEI" id="G4h-jE-XCZ"/>
                         <outlet property="graphDescriptionLabel" destination="Twu-CW-S1y" id="b2p-Qk-bmg"/>
                         <outlet property="graphView" destination="k6L-qt-Czj" id="rzm-RK-xcj"/>
                         <outlet property="maxLabel" destination="W3G-1y-GUZ" id="c3b-QH-hyw"/>
                         <outlet property="startTime" destination="dQX-US-P3Z" id="bmZ-KH-76l"/>
+                        <outlet property="urineAndEndLabel" destination="asj-Ga-YNB" id="ALC-wW-3Za"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Llv-FI-FSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -784,6 +786,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgq-XY-viP">
                                 <rect key="frame" x="163" y="604" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitToiletForm:" destination="kS7-Ej-YPS" eventType="touchUpInside" id="gq4-Nh-2XA"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="wb0-a8-7U6">
                                 <rect key="frame" x="14" y="566" width="347" height="31"/>

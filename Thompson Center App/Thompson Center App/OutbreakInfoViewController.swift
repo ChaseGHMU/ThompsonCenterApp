@@ -17,6 +17,8 @@ class OutbreakInfoViewController: UIViewController {
     @IBOutlet weak var behaviorLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     @IBOutlet weak var graphDescriptionLabel: UILabel!
+    @IBOutlet weak var urineAndEndLabel: UILabel!
+    @IBOutlet weak var bowelAndStartLabel: UILabel!
     
     var desLabel = ""
     var endTimeLabel = ""
@@ -31,6 +33,10 @@ class OutbreakInfoViewController: UIViewController {
         graphView.passedName = passedName
         graphView.activity = desLabel
         behaviorLabel.text = behaviorInfoLabel
+        if desLabel == "Toilet Training"{
+            urineAndEndLabel.text = "Urine Success:"
+            bowelAndStartLabel.text = "Bowel Success:"
+        }
         setupGraph()
         // Do any additional setup after loading the view.
     }
@@ -41,6 +47,8 @@ class OutbreakInfoViewController: UIViewController {
             graphDescriptionLabel.text = "Number of times woken up"
         }else if desLabel == "Behavior"{
             graphDescriptionLabel.text = "Severity"
+        }else{
+            graphDescriptionLabel.text = "Number of Accidents"
         }
     }
 

@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class ToiletTrainingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var passedName:String = ""
     let options: [String] = ["Accident", "Success", "Self-Initiated", "Other"]
-    var selectedOptions: [String] = []
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        return formatter
+    }()
+    let date = Date()
+    var urineSuccess:Bool = false
+    var bowelSuccess:Bool = false
     
     @IBAction func updateSliderLabel(_ sender: Any) {
         let selectedValue = Int(accidentSlider.value)
@@ -21,6 +30,8 @@ class ToiletTrainingViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var accidentLabel: UILabel!
     @IBOutlet weak var bowelMovementsTable: UITableView!
     @IBOutlet weak var urinationTable: UITableView!
+    
+    let context: NSManagedObjectContext = .shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,18 +81,45 @@ class ToiletTrainingViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         //LOGIC FOR ADDING AND REMOVING FROM SELECTEDOPTIONS ARRAY
-        if cell?.accessoryType == .checkmark {
+        if tableView == bowelMovementsTable{
+            if cell?.accessoryType == .checkmark {
                 cell?.accessoryType = .none
-                selectedOptions = selectedOptions.filter{$0 != options[indexPath.row]}
-                print(selectedOptions)
-            } else {cell?.accessoryType = .checkmark
-                selectedOptions.append(options[indexPath.row])
-                print(selectedOptions)
+                if options[indexPath.row] == "Success"{
+                    bowelSuccess = false
+                }
+            } else {
+                cell?.accessoryType = .checkmark
+                if options[indexPath.row] == "Success"{
+                    bowelSuccess = true
+                }
             }
+        }else{
+            
+            if cell?.accessoryType == .checkmark {
+                cell?.accessoryType = .none
+                if options[indexPath.row] == "Success"{
+                    urineSuccess = false
+                }
+            } else {
+                cell?.accessoryType = .checkmark
+                if options[indexPath.row] == "Success"{
+                    urineSuccess = true
+                }
+            }
+        }
     }
     
     @IBAction func submitToiletForm(_ sender: Any) {
-            //Save to core data logic here
-    }
+        let dateAdded = dateFormatter.string(from: date)
+        let numAccidents = Int(accidentSlider.value)
+        if let input = Toilet(name: passedName, date: dateAdded, numAccidents: numAccidents , urineSuccess: urineSuccess, bowelSucces: bowelSuccess){
+            let activity = Activities(type: "Toilet Training", childName: passedName)
+            context.insert(input)
+            activity?.addToToilet(input)
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            navigationController!.popViewController(animated: true)
+        }
         
+    }
+    
 }

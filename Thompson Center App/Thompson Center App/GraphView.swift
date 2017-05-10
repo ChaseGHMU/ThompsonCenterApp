@@ -19,6 +19,7 @@ class GraphView: UIView {
     var maxNum: Int = 10
     
     var graphPoints:[Sleep] = Model.sharedInstance.fetchSleep()
+    var toiletPoints:[Toilet] = Model.sharedInstance.fetchToiletTraining()
     var graphArray:[Int] = []
     
     var behaviorGraphPoints:[Behavior] = Model.sharedInstance.fechBehavior()
@@ -39,6 +40,14 @@ class GraphView: UIView {
             for rows in behaviorGraphPoints{
                 if rows.child_name == passedName{
                     graphArray.append(Int(rows.severity))
+                }
+            }
+        }
+        
+        if activity == "Toilet Training"{
+            for rows in toiletPoints{
+                if rows.child_name == passedName{
+                    graphArray.append(Int(rows.num_accidents))
                 }
             }
         }

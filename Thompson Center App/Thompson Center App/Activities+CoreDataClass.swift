@@ -18,6 +18,9 @@ public class Activities: NSManagedObject {
     var behaviorArray:[Behavior]? {
         return self.behavior?.allObjects as? [Behavior]
     }
+    var toiletArray:[Toilet]? {
+        return self.toilet?.allObjects as? [Toilet]
+    }
     
     convenience init?(type: String, childName: String) {
         

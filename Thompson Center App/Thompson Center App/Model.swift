@@ -47,6 +47,15 @@ class Model {
         }
     }
     
+    func fetchToiletTraining() -> [Toilet] {
+        do {
+            let array = try managedContext?.fetch(Toilet.fetchRequest()) ?? []
+            return array
+        } catch {
+            return []
+        }
+    }
+    
     func fetchChildren() -> [Child] {
         do {
             let array = try managedContext?.fetch(Child.fetchRequest()) ?? []

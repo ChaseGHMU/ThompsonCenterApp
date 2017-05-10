@@ -2,7 +2,7 @@
 //  Activities+CoreDataProperties.swift
 //  Thompson Center App
 //
-//  Created by Chase Allen on 5/1/17.
+//  Created by Chase Allen on 5/10/17.
 //  Copyright © 2017 Chase J Allen. All rights reserved.
 //
 
@@ -16,11 +16,12 @@ extension Activities {
         return NSFetchRequest<Activities>(entityName: "Activities")
     }
 
-    @NSManaged public var type: String
-    @NSManaged public var child_name: String
+    @NSManaged public var child_name: String?
+    @NSManaged public var type: String?
     @NSManaged public var behavior: NSSet?
     @NSManaged public var child: Child?
     @NSManaged public var sleep: NSSet?
+    @NSManaged public var toilet: NSSet?
 
 }
 
@@ -55,5 +56,22 @@ extension Activities {
 
     @objc(removeSleep:)
     @NSManaged public func removeFromSleep(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for toilet
+extension Activities {
+
+    @objc(addToiletObject:)
+    @NSManaged public func addToToilet(_ value: Toilet)
+
+    @objc(removeToiletObject:)
+    @NSManaged public func removeFromToilet(_ value: Toilet)
+
+    @objc(addToilet:)
+    @NSManaged public func addToToilet(_ values: NSSet)
+
+    @objc(removeToilet:)
+    @NSManaged public func removeFromToilet(_ values: NSSet)
 
 }

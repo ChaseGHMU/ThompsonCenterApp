@@ -61,7 +61,7 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        //We only want the symptoms of this exact child, not everyone
         if(activities[section].child_name == passedName){return 1}
         return 0
     }
@@ -86,6 +86,14 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
                     cell.backgroundColor = .clear
                 }
         }
+        //display Toilet if it exists in this spot
+        if activities[indexPath.section].toiletArray?.count == 1{
+            if let toilet = activities[indexPath.section].toiletArray?[indexPath.row]{
+                cell.activity.text = toilet.type
+                cell.date.text = toilet.date_added
+                cell.backgroundColor = .clear
+            }
+        }
         return cell
     }
 
@@ -103,13 +111,22 @@ class BehaviorsViewController: UIViewController, UITableViewDelegate, UITableVie
                 }//end if let
             }//end if
             
-            if activities[selectedRow.section].sleepArray?.count == 0 {
+            if activities[selectedRow.section].behaviorArray?.count == 1 {
                 if let behavior = activities[selectedRow.section].behaviorArray?[selectedRow.row]{
                         destination.desLabel = behavior.type
                         destination.behaviorInfoLabel = behavior.behavior
                         destination.endTimeLabel = behavior.end_time
                         destination.startTimeLabel = behavior.start_time
                         destination.passedName = passedName
+                }//end if let
+            }//end if
+            
+            if activities[selectedRow.section].toiletArray?.count == 1 {
+                if let behavior = activities[selectedRow.section].toiletArray?[selectedRow.row]{
+                    destination.desLabel = behavior.type!
+                    destination.endTimeLabel = String(behavior.urine_success)
+                    destination.startTimeLabel = String(behavior.bowel_success)
+                    destination.passedName = passedName
                 }//end if let
             }//end if
             
