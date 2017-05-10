@@ -9,7 +9,6 @@
 import UIKit
 
 class OutbreakInfoViewController: UIViewController {
-    var passedName = ""
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startTime: UILabel!
@@ -20,36 +19,39 @@ class OutbreakInfoViewController: UIViewController {
     @IBOutlet weak var urineAndEndLabel: UILabel!
     @IBOutlet weak var bowelAndStartLabel: UILabel!
     
+    var passedName = ""
     var desLabel = ""
     var endTimeLabel = ""
     var startTimeLabel = ""
     var behaviorInfoLabel = ""
+    var graphlabel = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionLabel.text = desLabel
-        endTime.text = endTimeLabel
-        startTime.text = startTimeLabel
-        graphView.passedName = passedName
-        graphView.activity = desLabel
-        behaviorLabel.text = behaviorInfoLabel
-        if desLabel == "Toilet Training"{
-            urineAndEndLabel.text = "Urine Success:"
-            bowelAndStartLabel.text = "Bowel Success:"
-        }
         setupGraph()
         // Do any additional setup after loading the view.
     }
     
     func setupGraph(){
-        maxLabel.text = "\(String(describing: graphView.maxNum))"
-        if desLabel == "Sleep"{
-            graphDescriptionLabel.text = "Number of times woken up"
-        }else if desLabel == "Behavior"{
-            graphDescriptionLabel.text = "Severity"
-        }else{
-            graphDescriptionLabel.text = "Number of Accidents"
+        switch(desLabel){
+        case "Sleep":
+            graphlabel = "Number of times woken up"
+        case "Behavior":
+            graphlabel = "Severity"
+        default:
+            graphlabel = "Number of Accidents"
+            urineAndEndLabel.text = "Urine Success:"
+            bowelAndStartLabel.text = "Bowel Success:"
         }
+        descriptionLabel.text = desLabel
+        endTime.text = endTimeLabel
+        startTime.text = startTimeLabel
+        behaviorLabel.text = behaviorInfoLabel
+        graphDescriptionLabel.text = graphlabel
+        
+        graphView.passedName = passedName
+        graphView.activity = desLabel
+
     }
 
     override func didReceiveMemoryWarning() {
