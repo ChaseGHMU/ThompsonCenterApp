@@ -13,6 +13,12 @@ class ToiletTrainingViewController: UIViewController, UITableViewDelegate, UITab
     let options: [String] = ["Accident", "Success", "Self-Initiated", "Other"]
     var selectedOptions: [String] = []
     
+    @IBAction func updateSliderLabel(_ sender: Any) {
+        let selectedValue = Int(accidentSlider.value)
+        accidentLabel.text = String(selectedValue)
+    }
+    @IBOutlet weak var accidentSlider: UISlider!
+    @IBOutlet weak var accidentLabel: UILabel!
     @IBOutlet weak var bowelMovementsTable: UITableView!
     @IBOutlet weak var urinationTable: UITableView!
     
@@ -51,6 +57,14 @@ class ToiletTrainingViewController: UIViewController, UITableViewDelegate, UITab
         urinationCell.textLabel?.text = self.options[indexPath.row]
         
         return bowelCell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if tableView == bowelMovementsTable{
+            return "Bowel Movement"
+        }else{
+            return "Urination"
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

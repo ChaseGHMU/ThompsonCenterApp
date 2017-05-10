@@ -16,6 +16,7 @@ class GraphView: UIView {
     
     var passedName = ""
     var activity = ""
+    var maxNum: Int = 10
     
     var graphPoints:[Sleep] = Model.sharedInstance.fetchSleep()
     var graphArray:[Int] = []
@@ -55,10 +56,10 @@ class GraphView: UIView {
         let topBorder:CGFloat = 60
         let bottomBorder:CGFloat = 50
         let graphHeight = height - topBorder - bottomBorder
-        let maxValue = graphArray.max()
+        let maxValue = 10
         let columnYPoint = { (graphPoint:Int) -> CGFloat in
             var y:CGFloat = CGFloat(graphPoint) /
-                CGFloat(maxValue!) * graphHeight
+                CGFloat(maxValue) * graphHeight
             y = graphHeight + topBorder - y // Flip the graph
             return y
         }
